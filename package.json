@@ -1,0 +1,21 @@
+{
+  "name": "@b-open-io/product-skills",
+  "version": "1.0.0",
+  "description": "Production-ready skills for SEO, legal compliance, analytics, and launch preparation",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b-open-io/product-skills.git"
+  },
+  "keywords": [
+    "claude",
+    "plugin",
+    "seo",
+    "legal",
+    "analytics",
+    "marketing"
+  ],
+  "author": "b-open-io",
+  "license": "MIT",
+  "dependencies": {}
+}
