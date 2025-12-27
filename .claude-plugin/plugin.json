@@ -6,15 +6,11 @@
   "repository": "https://github.com/b-open-io/product-skills",
   "components": {
     "skills": [
-      "ai-seo-optimization",
-      "legal-compliance",
-      "analytics-setup",
-      "product-launch"
+      "ai-seo-optimization"
     ],
     "agents": [
       "seo-specialist",
-      "legal-specialist",
-      "marketing-specialist"
+      "legal-specialist"
     ]
   },
   "keywords": [
