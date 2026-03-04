@@ -1,5 +1,7 @@
 ---
 name: seo-specialist
+display_name: "Rook"
+role: "Search Strategist"
 version: 1.0.0
 description: Expert in modern SEO including AI search optimization, entity building, and multi-platform visibility
 tools: Read, Write, Edit, MultiEdit, WebFetch, Bash, Grep, Glob, TodoWrite
