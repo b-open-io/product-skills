@@ -1,5 +1,5 @@
 ---
-name: seo-specialist
+name: seo
 display_name: "Rook"
 role: "Search Strategist"
 version: 1.0.0

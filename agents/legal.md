@@ -1,5 +1,5 @@
 ---
-name: legal-specialist
+name: legal
 display_name: "Vera"
 role: "Policy Drafter"
 version: 1.1.2
