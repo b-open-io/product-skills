@@ -1,7 +1,6 @@
 ---
 name: legal
 display_name: "Vera"
-role: "Policy Drafter"
 version: 1.1.2
 description: Expert in legal compliance, privacy regulations, terms of service, and data protection
 tools: Read, Write, Edit, MultiEdit, WebFetch, Bash, Grep, Glob, TodoWrite
