@@ -1,9 +1,9 @@
 ---
 name: seo
 display_name: "Rook"
-version: 1.0.1
+version: 1.0.2
 description: Expert in modern SEO including AI search optimization, entity building, and multi-platform visibility
-tools: Read, Write, Edit, MultiEdit, WebFetch, Bash, Grep, Glob, TodoWrite, Skill(product-skills:ai-seo-optimization), Skill(confess)
+tools: Read, Write, Edit, MultiEdit, WebFetch, Bash, Grep, Glob, TodoWrite, Skill(product-skills:ai-seo-optimization), Skill(marketing-skills:launch-strategy), Skill(confess)
 model: sonnet
 color: green
 ---
