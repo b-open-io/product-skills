@@ -1,7 +1,7 @@
 ---
 name: legal-compliance
-description: "This skill should be used when the user asks to draft a privacy policy, terms of service, cookie policy, or data processing agreement; when they ask about GDPR, CCPA, HIPAA, or other privacy regulations; when they need a compliance audit, legal gap analysis, or regulatory guidance; when they ask about employment law, IP rights, open source licensing, or contract review; when they mention 'legal', 'compliance', 'regulation', 'liability', 'terms', 'privacy', or 'lawsuit'. Also invoke for crypto and digital asset questions: token classification (Howey test), security token offerings (STOs), stablecoins, GENIUS Act, DeFi compliance, CFTC jurisdiction, DAO liability, IRS crypto tax, AML/FinCEN MSB registration, tokenization of real-world assets (RWAs), UCC Article 8, and smart contract legal review. Provides US federal law source directory, legal research workflow, and document drafting guidance for the Anthony legal agent."
-version: 0.2.0
+description: "This skill should be used when the user asks to draft a privacy policy, terms of service, cookie policy, or data processing agreement; when they ask about GDPR, CCPA, HIPAA, or other privacy regulations; when they need a compliance audit, legal gap analysis, or regulatory guidance; when they ask about employment law, IP rights, open source licensing, or contract review; when they mention 'legal', 'compliance', 'regulation', 'liability', 'terms', 'privacy', or 'lawsuit'. This skill also applies to crypto and digital asset questions: token classification (Howey test), security token offerings, stablecoins, GENIUS Act, DeFi compliance, CFTC jurisdiction, DAO liability, IRS crypto tax, AML/FinCEN MSB registration, tokenization of real-world assets, UCC Article 8, and smart contract legal review. Also use for designing or building agentic legal workflows, multi-agent compliance pipelines, and legal AI system architecture using Vercel AI SDK or CrewAI."
+version: 0.2.1
 ---
 
 # Legal Compliance Skill
@@ -175,5 +175,9 @@ Detailed research guides are in `references/`:
 - **`references/crypto-securities-law.md`** — Howey test for digital assets, SEC cases (Ripple, Coinbase, Binance), STO exemptions, 2025 SEC guidance by product category
 - **`references/crypto-stablecoins-aml.md`** — GENIUS Act (enacted July 2025), FinCEN/BSA for crypto, MSB registration, Travel Rule, recent legislation (CLARITY Act, FIT21)
 - **`references/crypto-tokenization-cftc-tax.md`** — RWA tokenization, UCC Article 8, CFTC jurisdiction, Ooki DAO case, DAO liability, IRS crypto tax, Form 1099-DA broker reporting
-- **`references/agentic-workflows.md`** — Real-world agentic legal workflow patterns, multi-agent architectures, crypto-legal classifiers, tech stack guide, and bootstrap implementation guide
+- **`references/agentic-workflows.md`** — Real-world agentic legal workflow patterns, case studies (Aaron Sneed's Council, ProPlaintiff DocGen), crypto-legal classifiers, and bootstrap implementation guide
+- **`references/agentic-tech-stack.md`** — Vercel AI SDK and CrewAI patterns for legal agents, crypto-legal agent implementations (Howey classifier, stablecoin monitor, DAO analyzer), data source integration, Vercel/Railway deployment guide
+- **`references/regulations-and-agencies.md`** — eCFR API, Federal Register API, agency-by-agency breakdown (IRS, EEOC, USPTO/MPEP, FDA/openFDA), CFR navigation patterns
+- **`references/case-law.md`** — CourtListener REST API v4, citation verification workflow (hallucination prevention), Shepardizing without Westlaw, SCOTUS, Google Scholar, PACER/RECAP
+- **`references/github-legal-agent-implementations.md`** — Open-source legal AI agent repos (LegalAnt, LegalTrace, multi-agent compliance demos), architectures, and patterns from GitHub
 - **`references/github-legal-agent-implementations.md`** — Open-source legal AI agent repos (LegalAnt, LegalAgent, multi-agent compliance demos), architectures, and patterns from GitHub

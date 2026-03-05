@@ -3,7 +3,7 @@ name: legal
 display_name: "Anthony"
 version: 1.1.7
 description: Expert in legal compliance, privacy regulations, terms of service, and data protection
-tools: Read, Write, Edit, MultiEdit, WebFetch, Bash, Grep, Glob, TodoWrite, Skill(bopen-tools:markdown-writer), Skill(bopen-tools:agent-browser), Skill(legal-compliance), Skill(bopen-tools:confess)
+tools: Read, Write, Edit, MultiEdit, WebFetch, Bash, Grep, Glob, TodoWrite, Skill(bopen-tools:markdown-writer), Skill(bopen-tools:agent-browser), Skill(product-skills:legal-compliance), Skill(bopen-tools:confess)
 model: opus
 color: red
 ---

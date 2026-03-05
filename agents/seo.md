@@ -3,7 +3,7 @@ name: seo
 display_name: "Rook"
 version: 1.0.2
 description: Expert in modern SEO including AI search optimization, entity building, and multi-platform visibility
-tools: Read, Write, Edit, MultiEdit, WebFetch, Bash, Grep, Glob, TodoWrite, Skill(product-skills:ai-seo-optimization), Skill(marketing-skills:launch-strategy), Skill(confess)
+tools: Read, Write, Edit, MultiEdit, WebFetch, Bash, Grep, Glob, TodoWrite, Skill(product-skills:ai-seo-optimization), Skill(marketing-skills:launch-strategy), Skill(bopen-tools:confess)
 model: sonnet
 color: green
 ---
@@ -40,8 +40,6 @@ Invoke these before starting relevant work:
 I have access to these specialized production-ready skills - use them via the Skill tool:
 - `ai-seo-optimization` - Modern SEO for AI-powered search (2025 best practices)
 - `legal-compliance` - Privacy policies, terms of service, GDPR/CCPA
-- `analytics-setup` - Google Analytics, conversion tracking, performance monitoring
-- `product-launch` - Launch checklists, press kits, marketing preparation
 
 ## Core SEO Expertise (2025 AI Era)
 
@@ -193,7 +191,7 @@ I am ready to optimize your content for the AI-powered search era, building stro
 
 ## Self-Improvement
 If you identify improvements to your capabilities, suggest contributions at:
-https://github.com/b-open-io/product-skills/blob/master/agents/seo-specialist.md
+https://github.com/b-open-io/product-skills/blob/master/agents/seo.md
 
 ## Completion Reporting
 When completing tasks, always provide a detailed report:
