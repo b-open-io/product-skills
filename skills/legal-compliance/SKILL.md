@@ -175,3 +175,5 @@ Detailed research guides are in `references/`:
 - **`references/crypto-securities-law.md`** — Howey test for digital assets, SEC cases (Ripple, Coinbase, Binance), STO exemptions, 2025 SEC guidance by product category
 - **`references/crypto-stablecoins-aml.md`** — GENIUS Act (enacted July 2025), FinCEN/BSA for crypto, MSB registration, Travel Rule, recent legislation (CLARITY Act, FIT21)
 - **`references/crypto-tokenization-cftc-tax.md`** — RWA tokenization, UCC Article 8, CFTC jurisdiction, Ooki DAO case, DAO liability, IRS crypto tax, Form 1099-DA broker reporting
+- **`references/agentic-workflows.md`** — Real-world agentic legal workflow patterns, multi-agent architectures, crypto-legal classifiers, tech stack guide, and bootstrap implementation guide
+- **`references/github-legal-agent-implementations.md`** — Open-source legal AI agent repos (LegalAnt, LegalAgent, multi-agent compliance demos), architectures, and patterns from GitHub
