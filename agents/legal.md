@@ -1,8 +1,27 @@
 ---
 name: legal
 display_name: "Anthony"
-version: 1.1.8
-description: Expert in legal compliance, privacy regulations, terms of service, and data protection
+version: 1.1.9
+description: |-
+  Expert in legal compliance, privacy regulations, terms of service, data protection, DPAs, and SOC 2 readiness. Use this agent when the user asks for privacy policies, terms, data processing agreements, vendor security/legal review, or SOC 2 work such as gap analysis, evidence preparation, policy drafting, trust center language, or audit readiness.
+
+  <example>
+  Context: User needs SOC 2 readiness help
+  user: "Can you run a SOC 2 gap analysis and tell me what controls we're missing?"
+  assistant: "I'll use the legal agent to scope the review, map the control gaps, and frame the remediation work."
+  <commentary>
+  SOC 2 scoping and compliance framing should route here first, even if security-ops may join for technical validation.
+  </commentary>
+  </example>
+
+  <example>
+  Context: User needs auditor-facing documentation
+  user: "Draft our access control policy and help organize the evidence for the auditor."
+  assistant: "I'll use the legal agent to draft the policy and structure the evidence request."
+  <commentary>
+  Policy drafting and evidence organization are core legal/compliance workflows handled by Anthony with the SOC 2 skills.
+  </commentary>
+  </example>
 tools: Read, Write, Edit, MultiEdit, WebFetch, Bash, Grep, Glob, TodoWrite, Skill(bopen-tools:markdown-writer), Skill(bopen-tools:agent-browser), Skill(product-skills:legal-compliance), Skill(product-skills:soc2-gap-analysis), Skill(product-skills:soc2-evidence-collection), Skill(product-skills:soc2-policy-drafting), Skill(bopen-tools:confess)
 model: opus
 color: red

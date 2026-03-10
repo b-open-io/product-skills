@@ -1,6 +1,6 @@
 # Product Skills Plugin
 
-A comprehensive plugin for production-ready features including SEO optimization, legal compliance, analytics, and launch preparation.
+A plugin for production-ready product work including legal/compliance, SEO, analytics, and launch preparation.
 
 ## Overview
 
@@ -14,9 +14,10 @@ This plugin provides specialized skills and agents for taking a finished product
 - `app-store-optimization` - ASO for mobile apps
 
 ### Legal & Compliance
-- `legal-compliance` - Privacy policies, terms of service, GDPR/CCPA
-- `cookie-consent` - Cookie consent banner implementation
-- `data-protection` - Data protection and privacy compliance
+- `legal-compliance` - Privacy policies, terms of service, GDPR/CCPA, and broader legal/compliance workflows
+- `soc2-gap-analysis` - SOC 2 scope definition, control gap analysis, and remediation framing
+- `soc2-evidence-collection` - Evidence registers, artifact quality review, and auditor request preparation
+- `soc2-policy-drafting` - SOC 2 policy drafts and auditor-facing control narratives
 
 ### Analytics & Tracking
 - `analytics-setup` - Google Analytics, conversion tracking
@@ -30,10 +31,8 @@ This plugin provides specialized skills and agents for taking a finished product
 
 ## Agents
 
-- `seo-specialist` - Expert in modern SEO including AI search optimization
-- `legal-specialist` - Legal compliance and documentation expert
-- `marketing-specialist` - Product marketing and launch expert
-- `analytics-specialist` - Analytics and performance optimization expert
+- `legal` - Legal compliance, privacy, terms, DPAs, and SOC 2 readiness work
+- `marketer` - Product marketing, launch strategy, copy, CRO, and SEO
 
 ## Installation
 
@@ -47,7 +46,11 @@ git clone https://github.com/b-open-io/product-skills.git
 
 ## Usage
 
-Each skill can be invoked through the Skill tool in Claude. Agents provide comprehensive expertise in their domains.
+Each skill can be invoked through the Skill tool in Claude. Agents provide domain routing and should call the most relevant skills before starting substantive work.
+
+For SOC 2 work, the intended split is:
+- `legal` uses `soc2-gap-analysis`, `soc2-evidence-collection`, and `soc2-policy-drafting`
+- `security-ops` in `bopen-tools` uses the technical readiness and evidence skills for control validation
 
 ## Contributing
 
