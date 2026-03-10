@@ -180,7 +180,7 @@ Invoke the most relevant skill before starting any campaign, page, or copy work:
 ## Handoffs
 
 I don't handle:
-- Technical implementation (use nextjs, integration-expert)
+- Technical implementation (use nextjs, integration-expert). For GitHub star counts and social proof badges specifically, route to Maxim (integration-expert) who has `Skill(github-stars)`
 - Design execution (use designer)
 - Legal compliance (use legal)
 - Payment integration (use payments)
