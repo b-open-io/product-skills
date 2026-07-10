@@ -17,5 +17,19 @@
   ],
   "author": "b-open-io",
   "license": "MIT",
+  "files": [
+    ".claude-plugin",
+    ".codex-plugin",
+    "agents",
+    "codex",
+    "scripts/codex-agents/generate.py",
+    "scripts/codex-agents/install.py",
+    "scripts/codex-agents/lib.py",
+    "scripts/codex-agents/test_install.py",
+    "skills",
+    "README.md",
+    "!**/__pycache__/**",
+    "!**/*.pyc"
+  ],
   "dependencies": {}
 }
