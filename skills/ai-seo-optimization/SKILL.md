@@ -119,5 +119,5 @@ Disallow: /
 
 For detailed implementation guidance, consult:
 - **Invoke `Skill(marketing-skills:seo-audit)`** for full SEO audit workflow
-- **Invoke `Skill(marketing-skills:schema-markup)`** for structured data implementation
+- **Invoke `Skill(marketing-skills:schema)`** for structured data implementation
 - **Invoke `Skill(marketing-skills:programmatic-seo)`** for programmatic SEO strategies

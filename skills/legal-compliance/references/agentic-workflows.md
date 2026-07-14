@@ -166,7 +166,7 @@ Output: structured gap analysis with `compliant / gap / unclear` status per requ
 
 Polls Congress.gov API daily for new crypto legislation. Filters by keywords (digital asset, stablecoin, cryptocurrency, token, blockchain, DeFi). Scores each bill 0–10 for startup impact. Routes high-impact findings to immediate alert; low-impact to weekly digest.
 
-Active bills to seed the tracker: S.1582 (GENIUS Act, enacted July 2025), H.R.3633 (CLARITY Act, House-passed June 2025), Senate Agriculture Committee discussion draft (November 2025 CLARITY update).
+Active bills to seed the tracker: S.1582 (GENIUS Act, enacted July 18, 2025), H.R.3633 (CLARITY Act, passed the House on July 17, 2025), Senate Agriculture Committee discussion draft (November 2025 CLARITY update).
 
 ### DAO Liability Analyzer
 

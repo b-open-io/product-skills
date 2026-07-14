@@ -32,7 +32,7 @@ description: |-
   Homepage copy requires understanding of value propositions, audience psychology, and conversion principles.
   </commentary>
   </example>
-tools: Read, Write, Edit, MultiEdit, WebFetch, WebSearch, Bash, Grep, Glob, TodoWrite, Skill(copywriting), Skill(copy-editing), Skill(humanize), Skill(marketing-ideas), Skill(marketing-psychology), Skill(marketing-skills:launch-strategy), Skill(pricing-strategy), Skill(email-sequence), Skill(email-best-practices), Skill(react-email), Skill(social-content), Skill(page-cro), Skill(form-cro), Skill(signup-flow-cro), Skill(onboarding-cro), Skill(popup-cro), Skill(paywall-upgrade-cro), Skill(geo-optimizer), Skill(seo-audit), Skill(schema-markup), Skill(programmatic-seo), Skill(paid-ads), Skill(referral-program), Skill(free-tool-strategy), Skill(competitor-alternatives), Skill(ab-test-setup), Skill(analytics-tracking), Skill(agent-browser), Skill(product-skills:ai-seo-optimization), Skill(pm-market-research:user-personas), Skill(pm-market-research:market-segments), Skill(pm-market-research:user-segmentation), Skill(pm-market-research:customer-journey-map), Skill(pm-market-research:market-sizing), Skill(pm-market-research:competitor-analysis), Skill(pm-market-research:sentiment-analysis), Skill(pm-marketing-growth:marketing-ideas), Skill(pm-marketing-growth:positioning-ideas), Skill(pm-marketing-growth:value-prop-statements), Skill(pm-marketing-growth:product-name), Skill(pm-marketing-growth:north-star-metric), Skill(pm-go-to-market:gtm-motions), Skill(pm-go-to-market:growth-loops), Skill(pm-go-to-market:competitive-battlecard), Skill(pm-go-to-market:ideal-customer-profile), Skill(pm-product-strategy:value-proposition), Skill(pm-product-strategy:lean-canvas), Skill(pm-product-strategy:monetization-strategy), Skill(pm-product-strategy:pricing-strategy)
+tools: Read, Write, Edit, MultiEdit, WebFetch, WebSearch, Bash, Grep, Glob, TodoWrite, Skill(copywriting), Skill(copy-editing), Skill(humanize), Skill(marketing-ideas), Skill(marketing-psychology), Skill(marketing-skills:launch), Skill(marketing-skills:pricing), Skill(marketing-skills:emails), Skill(marketing-skills:social), Skill(marketing-skills:cro), Skill(marketing-skills:signup), Skill(marketing-skills:onboarding), Skill(marketing-skills:popups), Skill(marketing-skills:paywalls), Skill(geo-optimizer), Skill(seo-audit), Skill(marketing-skills:schema), Skill(programmatic-seo), Skill(marketing-skills:ads), Skill(marketing-skills:referrals), Skill(marketing-skills:free-tools), Skill(marketing-skills:competitors), Skill(marketing-skills:ab-testing), Skill(marketing-skills:analytics), Skill(agent-browser), Skill(product-skills:ai-seo-optimization), Skill(pm-market-research:user-personas), Skill(pm-market-research:market-segments), Skill(pm-market-research:user-segmentation), Skill(pm-market-research:customer-journey-map), Skill(pm-market-research:market-sizing), Skill(pm-market-research:competitor-analysis), Skill(pm-market-research:sentiment-analysis), Skill(pm-marketing-growth:marketing-ideas), Skill(pm-marketing-growth:positioning-ideas), Skill(pm-marketing-growth:value-prop-statements), Skill(pm-marketing-growth:product-name), Skill(pm-marketing-growth:north-star-metric), Skill(pm-go-to-market:gtm-motions), Skill(pm-go-to-market:growth-loops), Skill(pm-go-to-market:competitive-battlecard), Skill(pm-go-to-market:ideal-customer-profile), Skill(pm-product-strategy:value-proposition), Skill(pm-product-strategy:lean-canvas), Skill(pm-product-strategy:monetization-strategy), Skill(pm-product-strategy:pricing-strategy)
 color: yellow
 ---
 
@@ -115,38 +115,65 @@ When delivering marketing work:
 Invoke the most relevant skill before starting any campaign, page, or copy work:
 
 **CRO & Conversion**
-- `Skill(marketing-skills:page-cro)` — landing page conversion optimization
-- `Skill(marketing-skills:form-cro)` — form conversion optimization
-- `Skill(marketing-skills:signup-flow-cro)` — signup funnel optimization
-- `Skill(marketing-skills:onboarding-cro)` — onboarding flow optimization
-- `Skill(marketing-skills:paywall-upgrade-cro)` — upgrade/paywall optimization
-- `Skill(marketing-skills:popup-cro)` — popup and modal optimization
+- `Skill(marketing-skills:cro)` — conversion optimization for landing pages and forms
+- `Skill(marketing-skills:signup)` — signup funnel optimization
+- `Skill(marketing-skills:onboarding)` — onboarding flow optimization
+- `Skill(marketing-skills:paywalls)` — upgrade and paywall optimization
+- `Skill(marketing-skills:popups)` — popup and modal optimization
+- `Skill(marketing-skills:churn-prevention)` — retention and churn reduction
 
 **Copy & Content**
 - `Skill(marketing-skills:copywriting)` — persuasive copy guidance
 - `Skill(marketing-skills:copy-editing)` — review and tighten copy
 - `Skill(humanize)` — invoke before delivering ANY marketing copy, email, social post, or landing page text. Removes AI patterns that erode reader trust before they even notice.
 - `Skill(marketing-skills:content-strategy)` — content planning and strategy
-- `Skill(marketing-skills:social-content)` — social media content creation
-- `Skill(marketing-skills:email-sequence)` — email sequence writing
+- `Skill(marketing-skills:social)` — social media content creation
+- `Skill(marketing-skills:emails)` — email sequence writing
+- `Skill(marketing-skills:ad-creative)` — ad concepts, hooks, and creative variants
+- `Skill(marketing-skills:video)` — short-form and explainer video scripting
+- `Skill(marketing-skills:image)` — marketing image concepting and prompts
 
 **SEO & AI Visibility**
 - `Skill(product-skills:ai-seo-optimization)` — modern AI-era SEO (entity building, citation optimization, multi-platform visibility)
+- `Skill(marketing-skills:ai-seo)` — AEO/GEO/LLMO, llms.txt, AI-citation optimization
 - `Skill(marketing-skills:seo-audit)` — traditional SEO analysis
 - `Skill(marketing-skills:programmatic-seo)` — programmatic SEO strategies
-- `Skill(marketing-skills:schema-markup)` — structured data markup
-- `Skill(marketing-skills:competitor-alternatives)` — competitor comparison pages
-- `Skill(marketing-skills:free-tool-strategy)` — free tool as growth lever
+- `Skill(marketing-skills:site-architecture)` — site structure and internal linking
+- `Skill(marketing-skills:schema)` — structured data markup
+- `Skill(marketing-skills:competitors)` — competitor comparison pages
+- `Skill(marketing-skills:directory-submissions)` — directory and listing placement
+- `Skill(marketing-skills:aso)` — app store optimization
+- `Skill(marketing-skills:free-tools)` — free tool as growth lever
+- `Skill(marketing-skills:lead-magnets)` — lead magnet design and offers
 
 **Paid & Analytics**
-- `Skill(marketing-skills:paid-ads)` — ad creative and targeting
-- `Skill(marketing-skills:ab-test-setup)` — A/B test configuration
-- `Skill(marketing-skills:analytics-tracking)` — analytics implementation
-- `Skill(marketing-skills:referral-program)` — referral program design
+- `Skill(marketing-skills:ads)` — ad creative and targeting
+- `Skill(marketing-skills:ab-testing)` — A/B test configuration
+- `Skill(marketing-skills:analytics)` — analytics implementation
+- `Skill(marketing-skills:referrals)` — referral program design
+- `Skill(marketing-skills:offers)` — offer and promotion design
+
+**Outbound & Sales**
+- `Skill(marketing-skills:cold-email)` — cold email sequences and deliverability
+- `Skill(marketing-skills:prospecting)` — ICP-to-lead-list prospecting
+- `Skill(marketing-skills:sales-enablement)` — one-pagers, battlecards, sales scripts
+- `Skill(marketing-skills:revops)` — lead scoring, routing, and SLA design
+
+**PR & Community**
+- `Skill(marketing-skills:public-relations)` — PR angles, pitches, and outlet targeting
+- `Skill(marketing-skills:community-marketing)` — community building and ambassador programs
+- `Skill(marketing-skills:co-marketing)` — partnership and co-marketing plays
+- `Skill(marketing-skills:sms)` — SMS campaign design
 
 **Strategy**
-- `Skill(marketing-skills:launch-strategy)` — product launch planning
-- `Skill(marketing-skills:pricing-strategy)` — pricing strategy
+- `Skill(marketing-skills:launch)` — product launch planning
+- `Skill(marketing-skills:pricing)` — pricing strategy
+- `Skill(marketing-skills:marketing-plan)` — full marketing plan construction
+- `Skill(marketing-skills:marketing-loops)` — operational growth-loop cadence
+- `Skill(marketing-skills:marketing-council)` — multi-perspective marketing review
+- `Skill(marketing-skills:product-marketing)` — positioning and product-marketing foundation
+- `Skill(marketing-skills:customer-research)` — customer and market research
+- `Skill(marketing-skills:competitor-profiling)` — deep competitor profiling
 - `Skill(marketing-skills:marketing-psychology)` — behavioral psychology for marketing
 
 **Market Research** (pm-market-research)

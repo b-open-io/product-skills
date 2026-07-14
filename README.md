@@ -14,7 +14,7 @@ This plugin provides specialized skills and agents for taking a finished product
 - `app-store-optimization` - ASO for mobile apps
 
 ### Legal & Compliance
-- `legal-compliance` - Privacy policies, terms of service, GDPR/CCPA, and broader legal/compliance workflows
+- `legal-compliance` - Privacy policies, terms of service, GDPR/CCPA, broader legal/compliance workflows, and US crypto-law research for startup operations including stablecoins, token classification, FinCEN/MSB issues, tokenized assets, and broker-reporting questions
 - `soc2-gap-analysis` - SOC 2 scope definition, control gap analysis, and remediation framing
 - `soc2-evidence-collection` - Evidence registers, artifact quality review, and auditor request preparation
 - `soc2-policy-drafting` - SOC 2 policy drafts and auditor-facing control narratives
@@ -31,7 +31,7 @@ This plugin provides specialized skills and agents for taking a finished product
 
 ## Agents
 
-- `legal` - Legal compliance, privacy, terms, DPAs, and SOC 2 readiness work
+- `legal` - Legal compliance, privacy, terms, DPAs, SOC 2 readiness, and crypto/digital-asset law research for startup operations
 - `marketer` - Product marketing, launch strategy, copy, CRO, and SEO
 
 ## Installation

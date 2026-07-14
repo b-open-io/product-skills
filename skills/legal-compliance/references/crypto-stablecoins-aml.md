@@ -1,307 +1,249 @@
-# Stablecoins, AML/FinCEN, and Digital Asset Legislation
+# Stablecoins, AML, and Payment Rails
+
+US stablecoin law and AML/sanctions overlay for startup operations.
+
+**Last verified:** July 14, 2026
+**Scope:** federal stablecoin law, FinCEN/BSA, OFAC, IRS reporting overlap, and selected operational issues
+**Not legal advice**
+
+## Governing Authority
+
+- GENIUS Act:
+  - S.1582, 119th Congress
+  - Became **Public Law No. 119-27** on **July 18, 2025**
+  - Statute PDF: https://www.congress.gov/119/plaws/publ27/PLAW-119publ27.pdf
+  - Bill page: https://www.congress.gov/bill/119th-congress/senate-bill/1582
+- White House fact sheet on enactment:
+  - https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-signs-genius-act-into-law/
+- Executive Order 14178:
+  - https://www.whitehouse.gov/presidential-actions/2025/01/strengthening-american-leadership-in-digital-financial-technology/
+- White House digital-assets report:
+  - https://www.whitehouse.gov/wp-content/uploads/2025/07/Digital-Assets-Report-EO14178.pdf
+- FinCEN FIN-2019-G001:
+  - https://www.fincen.gov/index.php/resources/statutes-regulations/guidance/application-fincens-regulations-certain-business-models
+- FinCEN MSB registration resources:
+  - https://www.fincen.gov/resources/money-services-business-msb-registration
+- Bank Secrecy Act:
+  - https://www.law.cornell.edu/uscode/text/31/subtitle-IV/chapter-53
+- SEC staff statement on covered stablecoins:
+  - https://www.sec.gov/newsroom/speeches-statements/statement-stablecoins-040425
+- IRS digital-asset broker reporting page:
+  - https://www.irs.gov/newsroom/final-regulations-and-related-irs-guidance-for-reporting-by-brokers-on-sales-and-exchanges-of-digital-assets
+
+## Current Status as of July 14, 2026
+
+### GENIUS Is Enacted Federal Law — Not Fully Operative Yet
+
+- Congress.gov states that **S.1582** became **Public Law No. 119-27** on **July 18, 2025**.
+- **Enacted ≠ fully effective.** § 20 provides that the Act **and the amendments made by the Act** take effect on the **earlier of**:
+  1. **18 months after enactment** (i.e., **January 18, 2027**); or
+  2. **120 days after** the primary Federal payment stablecoin regulators issue **any final regulations** implementing the Act.
+- As of July 14, 2026, implementation remains in rulemaking (proposals and ANPRMs). Do **not** treat the full GENIUS supervisory/issuance regime, or the § 17 definitional amendments, as automatically live without checking whether the § 20 trigger has been met.
+- Separate transitional rule: § 3(b) makes it unlawful for a digital asset service provider to offer or sell a payment stablecoin in the United States unless issued by a permitted payment stablecoin issuer, beginning **3 years after enactment** (i.e., **July 18, 2028**), subject to foreign-issuer and safe-harbor provisions.
+- This is the canonical citation for current federal **stablecoin statute text**. Earlier legislative vehicles, including `S.394`, should be treated as history or predecessor context only.
+
+### § 17 Securities / Commodities Carve-Out (Payment Stablecoins of Permitted Issuers)
+
+- GENIUS **§ 17** amends the definitions of “security” and “commodity” so that a **payment stablecoin issued by a permitted payment stablecoin issuer** (as defined in GENIUS § 2) is **not** a “security” under:
+  - Securities Act of 1933 § 2(a)(1)
+  - Securities Exchange Act of 1934 § 3(a)(10)
+  - Investment Advisers Act of 1940 § 202(a)(18)
+  - Investment Company Act of 1940 § 2(a)(36) (and related ICA treatment for permitted issuers)
+  - Securities Investor Protection Act of 1970 § 16(14)
+- § 17(f) likewise provides that the CEA definition of “commodity” **does not include** a payment stablecoin issued by a permitted payment stablecoin issuer.
+- **Limits (do not overread):**
+  - The carve-out is **tied to permitted-issuer status** and the statute’s payment-stablecoin definitions — not every product labeled “stablecoin.”
+  - § 17’s definitional amendments are part of “the amendments made by this Act” and therefore track the **§ 20 effective-date** schedule.
+  - Until effective, securities/commodities analysis for stablecoins continues under pre-GENIUS authorities, staff statements, and fact-specific classification work.
+  - BSA/AML, OFAC, state money-transmission, and tax/reporting overlays remain independent of § 17.
+
+### CLARITY Is Not Law
+
+- The **Digital Asset Market Clarity Act (H.R. 3633)** passed the House on **July 17, 2025**, was received in the Senate on **September 18, 2025**, and as of **June 1, 2026** was reported out of Senate Banking and **placed on the Senate Legislative Calendar** (Calendar No. 423).
+- As of July 14, 2026, it remains **pending legislation — not enacted**. Do not cite CLARITY as current law.
+
+### SEC Staff View on Certain USD Stablecoins
+
+- On **April 4, 2025**, the SEC Division of Corporation Finance issued a staff statement addressing certain fully backed, one-for-one, redeemable USD stablecoins.
+- The statement says that, under the described facts and circumstances, the offer and sale of those “Covered Stablecoins” do not involve the offer and sale of securities.
+- The statement is expressly limited:
+  - it is staff guidance
+  - it has no independent force of law
+  - it does not cover all stablecoins
+  - it excludes yield-bearing and many non-USD or non-reserve-backed models
+- Once GENIUS § 17 is effective for a **permitted** payment stablecoin issuer, the statutory carve-out becomes the higher-authority securities/commodities reference for that product class; staff statements remain useful only as secondary interpretive material.
 
-US stablecoin regulation, Bank Secrecy Act obligations for crypto businesses, and the legislative landscape (GENIUS Act, FIT21/CLARITY Act).
+### FinCEN Rules Still Run in Parallel
 
-**Last Verified:** March 2026 | Not legal advice.
+- Regardless of GENIUS enactment or effective-date status, the FinCEN / BSA framework remains live today.
+- Stablecoin-adjacent businesses can still trigger MSB analysis where they administer, exchange, or transmit value.
 
----
+## Operational Implication for Startups
+
+### 1. Stablecoin Analysis Is Multi-Layered
+
+Do not reduce the question to “security or not.” A startup working around a payment stablecoin should analyze:
+
+1. GENIUS issuer / supervisory pathway **and** whether § 20 has made the operative regime effective
+2. reserve design and redemption mechanics
+3. FinCEN/MSB exposure
+4. sanctions screening and blocking capability
+5. custody and hosted-wallet exposure
+6. broker-reporting implications where the business is custodial or transaction-effecting
+7. state money-transmission overlay
+
+### 2. Marketing Discipline Matters
 
-## What Matters
+The strongest non-security posture for a payment stablecoin comes from keeping it framed as:
 
-The **GENIUS Act** (signed July 18, 2025) is now **active law** — the primary compliance obligation for stablecoin issuers. The **CLARITY Act** passed the House (July 2025) and awaits Senate action for broader market structure rules. The foundational FinCEN/BSA framework applies to all crypto businesses today, regardless of new legislation. A stablecoin startup must simultaneously navigate: federal licensing (GENIUS Act), FinCEN MSB registration, state money transmitter licenses, and evolving SEC/CFTC jurisdiction.
+- payment or settlement infrastructure
+- a stable store-of-value instrument
+- not an investment
+- not a yield product
+- not a governance or profit-sharing instrument
 
----
+### 3. Hosted Intermediation Is Higher-Risk Than Pure Protocol Work
 
-## GENIUS Act — The Current Law for Stablecoins
+The more the startup does any of the following, the more serious the AML/licensing analysis becomes:
 
-**Citation:** S. 1582, 119th Congress; signed July 18, 2025
-**Effective Date:** Earlier of 18 months after enactment (January 2027) or 120 days after implementing regulations are finalized
+- accepts funds or stablecoins from one person and transmits them to another
+- holds customer assets
+- runs hosted wallets
+- redeems or administers tokens
+- interfaces directly with fiat rails
+- operates customer-facing exchange or brokerage flows
 
-### Who Must Comply
+### 4. Stablecoin Protocols and Service Providers Are Not Automatically Issuers
 
-Unlawful to issue a "payment stablecoin" in the US unless you are a **"permitted payment stablecoin issuer" (PPSI)**.
+Protocol authors, software vendors, API providers, and infrastructure contractors should be analyzed separately from the legal issuer.
+But if they move into administration, custody, redemption, hosted-wallet control, or transaction intermediation, the risk profile changes quickly.
 
-**Payment Stablecoin Definition:** A digital asset designed to maintain a stable value relative to a fixed monetary value; used as payment or settlement; redeemable on demand.
+## GENIUS Act Checklist
 
-### Permitted Payment Stablecoin Issuer Categories
+Use this as a triage list, not a full statutory summary.
 
-| Issuer Type | Regulator | Threshold |
-|-------------|-----------|-----------|
-| Federally chartered bank | OCC | Any size |
-| State-licensed non-bank | State regulator (if "substantially similar" to federal) | ≤ $10 billion outstanding |
-| Federal non-bank license | OCC | Any size (election available) |
-| State-licensed insured depository | FDIC/State | Any size |
-| Federal credit union | NCUA | Any size |
+- Confirm **enactment** (Pub. L. 119-27, July 18, 2025) versus **effective date** under § 20
+- Determine whether the asset is best analyzed as a **payment stablecoin** under the statute’s definitions
+- Identify the actual issuer and any affiliates performing issuance, redemption, reserve, custody, or compliance functions
+- Map the contemplated regulatory lane:
+  - insured depository institution path
+  - federal nonbank path
+  - state-qualified path where available
+- Assess whether the issuer would be a **permitted payment stablecoin issuer** (relevant to § 17 carve-out once effective)
+- Confirm reserve design, liquidity, segregation, and public disclosure assumptions
+- Confirm redemption-at-par assumptions and who can redeem
+- Check whether product design introduces yield, profit participation, or other features that weaken payment-instrument treatment
+- Confirm lawful-order / compliance-control implications in the technical design
+- Track the § 3(b) three-year digital-asset-service-provider offer/sale transition
 
-**$10 Billion Threshold:** Issuers with >$10B outstanding face **mandatory** primary federal supervision. Below $10B, state licensing path is available.
+## FinCEN and BSA Overlay
 
-### Reserve Requirements (1:1 Mandatory)
+### Core Classification Source
 
-Reserves must equal **at least 100%** of outstanding payment stablecoins. Permitted reserve assets:
-1. US coins and currency (physical cash)
-2. Demand deposits or insured shares at FDIC/NCUA-insured institutions
-3. Treasury bills with maturity ≤ 90 days
-4. Repurchase agreements with maturity ≤ 7 days backed by T-bills
-5. Government money market funds (Treasury-only)
-6. Central bank reserves
-7. Other government-issued assets approved by regulators
+FinCEN's key live source remains **FIN-2019-G001**.
 
-**Prohibited:** Rehypothecation of reserve assets; commingling with operational funds; all reserves must be segregated.
+Its framework still matters:
 
-### Disclosure and Reporting
-
-| Requirement | Frequency |
-|-------------|-----------|
-| Reserve composition report | Monthly, public website |
-| Accounting firm examination of reserves | Monthly |
-| Executive certification to regulator | Monthly |
-| Audited annual financial statements | Annual (>$50B outstanding) |
-| Redemption policy disclosure | At issuance and on update |
-
-### AML/BSA Compliance
-
-Stablecoin issuers are treated as **financial institutions** under the Bank Secrecy Act (31 U.S.C. § 5312):
-- Full AML/CFT program (written, risk-based)
-- Sanctions compliance program (OFAC screening)
-- FinCEN must issue tailored AML rules for stablecoin issuers
-
-### Technical Compliance Requirements
-
-Must possess technical capability to:
-- **Seize** payment stablecoins on lawful order
-- **Freeze** payment stablecoins on lawful order
-- **Burn** (destroy) payment stablecoins on lawful order
-
-**Critical infrastructure:** Smart contract architecture must include admin controls for freeze/seize/burn.
-
-### Prohibited Activities
-
-| Prohibition | Details |
-|-------------|---------|
-| Yield/interest | Cannot pay interest or yield solely for holding or using the stablecoin |
-| Government backing claims | Cannot claim stablecoins are backed by US government, federally insured, or legal tender |
-| Tying arrangements | Cannot condition access on purchasing unrelated products or agreements to not use competitors |
-
-### GENIUS Act Compliance Timeline
-
-1. **Now:** Determine if your token meets "payment stablecoin" definition
-2. **Now:** Begin state licensing process or OCC non-bank charter application
-3. **Before effective date:** Establish 1:1 reserve structure with compliant assets
-4. **Before effective date:** Monthly reporting and accounting firm engagement
-5. **Before effective date:** AML/sanctions program meeting BSA standards
-6. **Before effective date:** Freeze/seize/burn smart contract controls
-7. **Before effective date:** Redemption policy drafted and disclosed
-
----
-
-## Market Structure Legislation
-
-### CLARITY Act (FIT21 Successor) — Not Yet Law
-
-**Citation:** H.R. 3633, 119th Congress
-**Status:** Passed House July 17, 2025; pending Senate as of March 2026
-
-**CFTC/SEC Jurisdiction Framework:**
-
-| Asset Category | Regulator | Trigger |
-|----------------|-----------|---------|
-| Digital Commodity | CFTC (exclusive spot jurisdiction) | Blockchain is "functional" AND "sufficiently decentralized" |
-| Restricted Digital Asset | SEC | Not yet functional OR not sufficiently decentralized |
-| Permitted Payment Stablecoin | Separate framework (GENIUS Act) | |
-
-**"Sufficiently Decentralized":** No single person/affiliated group controls ≥20% of digital asset or voting power.
-
-**DeFi safe harbor:** Decentralized protocols expressly exempt from exchange registration requirements where no single party has unilateral control.
-
-**If enacted:** All token issuers and platforms must determine asset classification and register with the appropriate regulator.
-
-### FIT21 (Historical — Shaped Current Framework)
-
-Passed House May 22, 2024; did not become law. Superseded by CLARITY Act. Its jurisdictional framework (CFTC for commodities, SEC for securities, decentralization test) directly shaped GENIUS Act and CLARITY Act.
-
-### Lummis-Gillibrand (Historical — Template Reference)
-
-Never passed. Its classification taxonomy (digital commodity vs. digital security vs. ancillary asset) is widely used by practitioners and referenced in agency guidance.
-
----
-
-## Bank Secrecy Act and FinCEN Registration
-
-**Citation:** 31 U.S.C. §§ 5311-5336; 31 C.F.R. Chapter X
-
-### When Crypto Businesses Are Money Services Businesses
-
-**FinCEN FIN-2019-G001** (authoritative guidance): Three categories of CVC market participants:
-
-| Category | MSB Status | Description |
-|----------|-----------|-------------|
-| **User** | NOT an MSB | Obtains and uses CVC solely for own purposes |
-| **Exchanger** | MSB (money transmitter) | Accepts and transmits CVC, or buys/sells CVC for any reason |
-| **Administrator** | MSB (money transmitter) | Issues and redeems CVC; has authority to redeem/withdraw from circulation |
-
-**Stablecoin issuer that issues AND redeems = Administrator = MSB (money transmitter)**
-
-### FinCEN Registration (Required Within 180 Days of Commencing Operations)
-
-- **Form 107** (Registration of Money Services Business), filed electronically at BSA E-Filing System
-- **Free** (no filing fee); renewal every 2 years
-- Update within 180 days of any change (new locations, new services, ownership changes)
-- FinCEN registration does NOT replace state money transmitter licenses — both required
-
-### Mandatory AML Program Requirements (31 C.F.R. § 1022.210)
-
-Every MSB must maintain a written AML program with at minimum:
-1. **Policies, procedures, and internal controls** — reasonably designed to prevent money laundering and terrorist financing
-2. **Compliance officer** — designated, responsible for day-to-day AML compliance
-3. **Ongoing employee training** — periodic, relevant to roles
-4. **Independent review** — testing to monitor and maintain AML program adequacy
-
-### Reporting Requirements
-
-| Report | Trigger | Deadline |
-|--------|---------|---------|
-| CTR (Currency Transaction Report) | Cash transactions > $10,000 | 15 calendar days |
-| SAR (Suspicious Activity Report) | Suspected illicit activity ≥ $2,000 | 30 days (60 if no suspect identified) |
-
-### Recordkeeping
-
-**Funds Transfer Rule (31 C.F.R. § 1010.410):** For transfers of **$3,000 or more**, collect and retain:
-- Originator: full legal name, address, account number, amount
-- Beneficiary: full legal name, account number
-- Retain for **5 years**
-
-### Travel Rule (31 C.F.R. § 1010.410)
-
-**Current threshold:** $3,000 (same as traditional wire transfers)
-
-For transfers ≥ $3,000, originating and receiving financial institution/MSB must collect and pass along originator and beneficiary information.
-
-**VASP-to-VASP compliance solutions:** TRISA, TRP, OpenVASP, Notabene, Sygna
-
-**Open gap:** VASP-to-unhosted wallet transfers — FinCEN's 2020 proposed rule (never finalized) would require verification of unhosted wallet owners. Future rulemaking expected.
-
----
-
-## Other Key Business Model Determinations (FIN-2019-G001)
-
-| Business | MSB Status |
-|----------|-----------|
-| DEX | May be exchanger/MSB depending on whether they hold or transmit funds on behalf of users |
-| Multi-signature wallet provider | MSB if co-signs transactions (control over funds); NOT MSB if providing software without independent control |
-| Hosted wallet provider (custodian) | MSB |
-| Unhosted wallet software developer | Generally NOT MSB (no control over funds) |
-| Mining/validation (own rewards) | NOT MSB when selling mined cryptocurrency |
-| Mining pool (holds/transmits for miners) | May be MSB |
-
----
-
-## Digital Asset Anti-Money Laundering Act (DAAMLA) — NOT Current Law
-
-**Status:** S. 2669, 118th Congress — did not pass. Monitor for reintroduction.
-
-**If enacted, would:**
-- Extend BSA obligations (including KYC) to digital asset wallet providers, miners, and validators
-- Finalize the December 2020 FinCEN proposed rule on unhosted wallets (verification and reporting requirements)
-- Direct FinCEN to issue guidance and authorize Treasury to prohibit handling of digital asset mixers, privacy coins, and anonymity-enhancing technologies
-- Extend OFAC sanctions obligations to all crypto transactions
-
-**Why this matters even though it didn't pass:** The 2020 FinCEN unhosted wallet rule (basis for DAAMLA) could be finalized by executive action at any time. Build compliance infrastructure for future unhosted wallet reporting.
-
----
-
-## OCC Guidance for National Banks
-
-### OCC Interpretive Letter 1172 (October 2020) — Active
-
-National banks **may hold deposits serving as reserves for stablecoins**:
-- Applies to 1:1 fiat-backed stablecoins
-- Banks must verify daily that reserve account balances ≥ outstanding stablecoins issued
-- Reserves can be held as issuer deposits OR as deposits of individual stablecoin holders (with pass-through FDIC insurance if requirements met)
-
-### OCC Interpretive Letter 1183 (March 2025) — Active (Supersedes 1179)
-
-National banks may now engage without advance OCC approval:
-- **Crypto-asset custody services** — holding crypto on behalf of customers
-- **Stablecoin reserve holding** — per Letter 1172 conditions
-- **Stablecoin issuance and payment activities** — participating in stablecoin payment networks
-- **Node verification network participation** — operating blockchain nodes
-
-**Practical impact:** Banks are now more accessible as banking partners for stablecoin reserve custody without special OCC approval.
-
----
-
-## State Money Transmitter Licenses
-
-**Required in addition to FinCEN registration.** 49 states + DC + territories have MTL requirements (Montana is the only exception).
-
-| State | Key Notes |
-|-------|-----------|
-| New York | BitLicense required for any "Virtual Currency Business Activity" involving NY or NY residents; $5,000 application fee; most stringent |
-| California | Digital Financial Assets Law (DFAL) effective July 1, 2026; DFPI licensing required |
-| Wyoming | Most permissive; SPDI (Special Purpose Depository Institution) charter available |
-| Texas, Florida | Generally permissive |
-
-**GENIUS Act impact on state MTLs:** Creates federal licensing pathway but may not automatically replace state MTL requirements. Legal analysis of preemption is developing. Continue pursuing MTLs while this develops.
-
-**Multi-state licensing strategy:**
-1. File FinCEN Form 107 first (federal baseline)
-2. Obtain MTL in state of incorporation
-3. High-priority states: NY, CA, TX, FL
-4. Use NMLS (Nationwide Multistate Licensing System) for coordinated applications
-5. Budget 12-24 months and $500K-$2M+ for full 50-state build-out
-
----
-
-## Compliance Checklist
-
-### Immediate (Pre-Launch)
-
-- [ ] Legal classification: Does your token meet "payment stablecoin" definition under GENIUS Act?
-- [ ] FinCEN MSB determination: Are you administrator, exchanger, or user under FIN-2019-G001?
-- [ ] File FinCEN Form 107 within 180 days of commencing operations (free, online)
-- [ ] Written AML program — must exist before taking customer funds
-- [ ] Designate Compliance Officer
-
-### Short-Term (0-6 Months)
-
-- [ ] Implement AML/KYC program with policies, procedures, Customer Identification Program (CIP)
-- [ ] OFAC sanctions screening for all customers and transactions
-- [ ] State MTL applications — NY BitLicense and top-5 state MTLs (12-24 month process, start immediately)
-- [ ] Bank account for reserves — approach OCC-regulated national bank (Letter 1183 makes this easier)
-- [ ] Reserve structure design — only GENIUS Act-compliant assets in reserve accounts
-- [ ] Travel Rule compliance solution — integrate with TRISA, Notabene, or equivalent
-
-### Before GENIUS Act Effective Date (~January 2027)
-
-- [ ] PPSI license — obtain OCC non-bank charter or qualifying state license
-- [ ] 1:1 reserve custody — segregated reserve account, no rehypothecation
-- [ ] Monthly reporting system — reserve composition reports + accounting firm examination
-- [ ] Executive certification process for monthly AML/sanctions program certification
-- [ ] Freeze/seize/burn controls — smart contract technical capability for lawful orders
-- [ ] Redemption policy — drafted, disclosed, implemented
-- [ ] No yield to holders — token design does not pay yield/interest for holding
-
-### Ongoing
-
-- [ ] CTR filings for cash transactions > $10,000 (15-day deadline)
-- [ ] SAR filings for suspicious activity ≥ $2,000 (30-day deadline)
-- [ ] Travel Rule records collected and transmitted for transfers ≥ $3,000
-- [ ] FinCEN Form 107 renewal every 2 years
-- [ ] State MTL renewals (typically annual or biennial)
-- [ ] Monitor CLARITY Act Senate action for CFTC/SEC jurisdiction changes
-- [ ] Monitor DAAMLA reintroduction — unhosted wallet rules could be finalized by executive action
-
----
-
-## Sources
-
-- [GENIUS Act — S. 1582 (119th Congress)](https://www.congress.gov/bill/119th-congress/senate-bill/1582)
-- [CLARITY Act — H.R. 3633 (119th Congress)](https://www.congress.gov/bill/119th-congress/house-bill/3633/text)
-- [FinCEN CVC Guidance FIN-2019-G001](https://www.fincen.gov/resources/statutes-regulations/guidance/application-fincens-regulations-certain-business-models)
-- [FinCEN MSB Registration](https://www.fincen.gov/resources/money-services-business-msb-registration)
-- [31 U.S.C. Chapter 53 — BSA](https://www.law.cornell.edu/uscode/text/31/subtitle-IV/chapter-53)
-- [OCC Interpretive Letter 1172 (October 2020)](https://www.occ.gov/topics/charters-and-licensing/interpretations-and-actions/2020/int1172.pdf)
-- [OCC Interpretive Letter 1183 (March 2025)](https://www.occ.gov/topics/charters-and-licensing/interpretations-and-actions/2025/int1183.pdf)
-- [NYDFS BitLicense](https://www.dfs.ny.gov/virtual_currency_businesses)
-- [White House GENIUS Act Fact Sheet](https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-signs-genius-act-into-law/)
-- [Latham & Watkins GENIUS Act Analysis](https://www.lw.com/en/insights/the-genius-act-of-2025-stablecoin-legislation-adopted-in-the-us)
+- **user**: generally not an MSB
+- **exchanger**: can be an MSB
+- **administrator**: can be an MSB
+
+For stablecoin projects, ask:
+
+- Who issues?
+- Who redeems?
+- Who accepts and transmits value?
+- Who controls customer assets or hosted wallets?
+- Who sits in the middle of the payment flow?
+
+### MSB Registration
+
+- FinCEN registration is handled through Form 107 and related MSB-registration resources.
+- Federal registration does not eliminate state licensing where state law also applies.
+
+### Travel Rule / Recordkeeping
+
+- The BSA and FinCEN rules continue to matter for larger-value transfers and for customer / counterparty information flows.
+- Firms handling virtual-asset transfers through hosted or intermediary channels should document how Travel Rule and recordkeeping obligations are analyzed and operationalized.
+
+## OFAC and Sanctions Overlay
+
+Sanctions compliance is not optional just because activity is on-chain.
+
+High-signal enforcement and sanctions references:
+
+- Bittrex civil penalty (sanctions compliance failures):
+  - https://home.treasury.gov/news/press-releases/jy1006
+- Binance:
+  - https://home.treasury.gov/news/press-releases/jy1925
+- **Tornado Cash — status as of July 14, 2026 (do not treat as currently designated):**
+  - OFAC originally designated Tornado Cash-related addresses in 2022 (historical action: https://home.treasury.gov/news/press-releases/jy0916).
+  - On **March 21, 2025**, Treasury **removed the economic sanctions** against Tornado Cash (delisting): https://home.treasury.gov/news/press-releases/sb0057 and OFAC recent-actions: https://ofac.treasury.gov/recent-actions/20250321.
+  - Use Tornado Cash as a **historical** sanctions / mixer-control case study and as a reminder that designations can be challenged, modified, or delisted — **not** as a live SDN designation of the protocol addresses.
+  - Related criminal prosecutions of individuals and residual SDN issues for named persons can still matter; check current SDN status before stating that any person or address is blocked.
+
+Operational takeaway:
+
+- hosted or custodial businesses need sanctions controls
+- firms should know who and where their customers are
+- geofencing alone is not a full sanctions program
+- mixers, sanctioned jurisdictions, blocked persons, and high-risk counterparties require documented controls
+- always verify current SDN / OFAC list status rather than relying on older designation headlines
+
+## IRS Reporting Overlap
+
+For custodial or hosted-wallet stablecoin businesses, check whether the model begins to resemble a reporting broker.
+
+IRS states:
+
+- brokers must report **gross proceeds** for transactions effected on or after **January 1, 2025**
+- brokers must report **basis** on certain transactions effected on or after **January 1, 2026**
+
+Source:
+
+- https://www.irs.gov/newsroom/final-regulations-and-related-irs-guidance-for-reporting-by-brokers-on-sales-and-exchanges-of-digital-assets
+
+## Unresolved or Contested Points
+
+- GENIUS implementation details will continue to develop through rules and supervision; the § 20 effective date may land earlier than January 18, 2027 if final implementing regulations issue.
+- State-law preemption or displacement questions should not be overstated while the statute is still in the transitional / rulemaking window.
+- The boundary between protocol authorship and regulated intermediation remains highly fact-dependent.
+- SEC's April 2025 stablecoin statement is helpful, but not a general safe harbor for all stablecoin designs, and it is subordinate to statute once GENIUS § 17 is effective for a covered permitted issuer product.
+- Yield-bearing or hybrid “stablecoin” products remain significantly riskier than plain payment-stablecoin models.
+
+## Primary Sources
+
+- S.1582 / Pub. L. 119-27 (enactment page):
+  - https://www.congress.gov/bill/119th-congress/senate-bill/1582
+- Pub. L. 119-27 statute PDF (§§ 3, 17, 20):
+  - https://www.congress.gov/119/plaws/publ27/PLAW-119publ27.pdf
+- White House GENIUS fact sheet:
+  - https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-signs-genius-act-into-law/
+- EO 14178:
+  - https://www.whitehouse.gov/presidential-actions/2025/01/strengthening-american-leadership-in-digital-financial-technology/
+- Digital Assets Report:
+  - https://www.whitehouse.gov/wp-content/uploads/2025/07/Digital-Assets-Report-EO14178.pdf
+- H.R. 3633 (CLARITY) status:
+  - https://www.congress.gov/bill/119th-congress/house-bill/3633
+- FinCEN FIN-2019-G001:
+  - https://www.fincen.gov/index.php/resources/statutes-regulations/guidance/application-fincens-regulations-certain-business-models
+- FinCEN MSB registration:
+  - https://www.fincen.gov/resources/money-services-business-msb-registration
+- BSA:
+  - https://www.law.cornell.edu/uscode/text/31/subtitle-IV/chapter-53
+- SEC stablecoin statement:
+  - https://www.sec.gov/newsroom/speeches-statements/statement-stablecoins-040425
+- IRS broker-reporting page:
+  - https://www.irs.gov/newsroom/final-regulations-and-related-irs-guidance-for-reporting-by-brokers-on-sales-and-exchanges-of-digital-assets
+- Tornado Cash delisting (Treasury, Mar. 21, 2025):
+  - https://home.treasury.gov/news/press-releases/sb0057
+  - https://ofac.treasury.gov/recent-actions/20250321
+
+## Secondary Commentary
+
+- Latham & Watkins crypto tracker:
+  - https://www.lw.com/en/us-crypto-policy-tracker
+- Cleary Gottlieb 2026 digital-assets update:
+  - https://www.clearygottlieb.com/news-and-insights/publication-listing/2026-digital-assets-regulatory-update-a-landmark-2025-but-more-developments-on-the-horizon
+- TRM policy review:
+  - https://www.trmlabs.com/reports-and-whitepapers/global-crypto-policy-review-outlook-2025-26

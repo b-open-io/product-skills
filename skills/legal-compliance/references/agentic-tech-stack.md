@@ -312,7 +312,7 @@ class GeniusActReport(BaseModel):
 3. Score 0–10 for crypto startup impact severity
 4. Route: high-impact (score ≥ 7) → immediate alert; low-impact → weekly digest
 
-**Active bills to seed the tracker:** S.1582 GENIUS Act (enacted July 2025), H.R.3633 CLARITY Act (House-passed June 2025), Senate Agriculture Committee discussion draft (November 2025).
+**Active bills to seed the tracker:** S.1582 GENIUS Act (enacted July 18, 2025), H.R.3633 CLARITY Act (passed the House on July 17, 2025), Senate Agriculture Committee discussion draft (November 2025).
 
 ### 4. DAO Liability Analyzer
 
