@@ -1,8 +1,10 @@
 # Product Skills Plugin
 
-A plugin for production-ready product work including legal/compliance, SEO, analytics, and launch preparation.
+Production-ready product work for Claude Code, Codex, and other skill-aware
+agents: legal and privacy compliance, SOC 2 readiness, SEO, marketing, and
+launch preparation.
 
-## Overview
+## Included capabilities
 
 This plugin provides specialized skills and agents for taking a finished product and preparing it for production deployment, marketing, and ongoing optimization.
 
@@ -36,22 +38,46 @@ This plugin provides specialized skills and agents for taking a finished product
 
 ## Installation
 
-```bash
-# Clone the repository
-git clone https://github.com/b-open-io/product-skills.git
+**Claude Code plugin** (includes Anthony and Caal as native plugin agents):
 
-# Or add as a Claude plugin
-# In your .claude/settings.json or project settings
+```bash
+/plugin install product-skills@b-open-io
 ```
+
+**Codex plugin** (installs the portable skills):
+
+```bash
+codex plugin marketplace add b-open-io/product-skills --ref master
+codex plugin add product-skills@b-open-io
+```
+
+Codex plugin installation does not silently add custom agents. After installing
+the plugin, explicitly invoke `codex-agent-setup` to copy both adapters into the
+current project's `.codex/agents/` directory as regular files. Request `--user`
+only for an intentional user-wide install, or pass `--target` for a specific
+agents directory. Start a **new Codex session** after installation or updates.
+
+The Codex runtime IDs are:
+
+- Anthony: `product_skills_legal`
+- Caal: `product_skills_marketer`
+
+The installer never edits global Codex configuration and preserves unrelated
+custom-agent files.
 
 ## Usage
 
-Each skill can be invoked through the Skill tool in Claude. Agents provide domain routing and should call the most relevant skills before starting substantive work.
+Each skill can be invoked through the runtime's skill mechanism. Agents provide
+domain routing and should load the most relevant installed skills before
+substantive work.
 
 For SOC 2 work, the intended split is:
-- `legal` uses `soc2-gap-analysis`, `soc2-evidence-collection`, and `soc2-policy-drafting`
-- `security-ops` in `bopen-tools` uses the technical readiness and evidence skills for control validation
+
+- Anthony uses `soc2-gap-analysis`, `soc2-evidence-collection`, and
+  `soc2-policy-drafting` for compliance framing and auditor-facing work.
+- `security-ops` in bopen-tools handles technical validation and readiness.
 
 ## Contributing
 
-This plugin follows the standard structure for Claude plugins. See individual skill directories for specific documentation.
+This plugin follows the standard Claude Code and Codex plugin structures. See
+the individual skill directories for detailed guidance.

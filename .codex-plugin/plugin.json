@@ -1,0 +1,34 @@
+{
+  "name": "product-skills",
+  "version": "1.0.11",
+  "description": "Production-ready product skills with optional Anthony and Caal custom-agent adapters for Codex",
+  "author": {
+    "name": "b-open-io",
+    "url": "https://github.com/b-open-io"
+  },
+  "repository": "https://github.com/b-open-io/product-skills",
+  "keywords": [
+    "seo",
+    "legal",
+    "compliance",
+    "analytics",
+    "marketing",
+    "agents",
+    "skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "product-skills",
+    "shortDescription": "Product launch, growth, legal, and compliance skills.",
+    "longDescription": "Production-ready SEO, marketing, legal, privacy, and SOC 2 skills, plus explicit installers for the optional Anthony and Caal Codex custom agents.",
+    "developerName": "b-open-io",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Skills"
+    ],
+    "websiteURL": "https://github.com/b-open-io/product-skills",
+    "defaultPrompt": [
+      "Help me prepare this product for launch and production."
+    ]
+  }
+}

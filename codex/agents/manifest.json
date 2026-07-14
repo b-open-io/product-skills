@@ -1,0 +1,27 @@
+{
+  "schema_version": "1",
+  "generator_schema_version": "1",
+  "manager": "product-skills",
+  "agents": [
+    {
+      "source_name": "legal",
+      "source_path": "agents/legal.md",
+      "source_version": "1.1.10",
+      "source_hash": "sha256:0342a46252603e0a29d159ab86f4b03cc5fa850a0f3e8be664294b694b89464c",
+      "generated_file": "product-skills-legal.toml",
+      "generated_hash": "sha256:ec2bdf79dc8bb29987bc7d6fe20d2c1bb66ace1dccbc55bf1ac9055ac10ecb97",
+      "agent_name": "product_skills_legal",
+      "default_install": true
+    },
+    {
+      "source_name": "marketer",
+      "source_path": "agents/marketer.md",
+      "source_version": "1.0.6",
+      "source_hash": "sha256:653e319bf1f02f8651b308b89a12389da7233133af3f80b10d9a95488954c58c",
+      "generated_file": "product-skills-marketer.toml",
+      "generated_hash": "sha256:09c83cbbf28d99c021b8def3cae9837706c853fe803fd5bf1dabe98f58ba18e0",
+      "agent_name": "product_skills_marketer",
+      "default_install": true
+    }
+  ]
+}
