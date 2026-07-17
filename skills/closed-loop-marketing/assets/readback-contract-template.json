@@ -1,0 +1,36 @@
+{
+  "deliverable": "",
+  "owner": "",
+  "hypothesis": "",
+  "readback_metric": {
+    "name": "",
+    "definition": "",
+    "baseline_value": null,
+    "target_value": null
+  },
+  "analytics_source": {
+    "platform": "",
+    "query_or_report": "",
+    "access_notes": ""
+  },
+  "decision_rule": {
+    "verifier": "experiment-stats",
+    "alpha": 0.05,
+    "min_lift": 0.05,
+    "min_sample_size": null,
+    "notes": ""
+  },
+  "rollback_rule": "",
+  "measurement_window": {
+    "start": "",
+    "end": ""
+  },
+  "status": "declared",
+  "verdict": {
+    "decision": "",
+    "measured_value": null,
+    "delta": null,
+    "recorded_at": "",
+    "notes": ""
+  }
+}

@@ -1,7 +1,7 @@
 ---
 name: ai-seo-optimization
 description: "This skill should be used when the user asks to audit a website for SEO, improve search rankings, optimize content for AI search (ChatGPT, Perplexity, Google AI Overviews), implement schema markup, build entity recognition, analyze keyword opportunities, improve E-E-A-T signals, create an SEO strategy, or when they mention 'SEO', 'search optimization', 'rankings', 'schema', 'structured data', 'AI search', 'featured snippets', or 'knowledge graph'. Provides modern SEO workflows for the AI-powered search era including entity-based optimization, multi-platform visibility (Google, ChatGPT, Perplexity, Gemini), and technical SEO for 2025."
-version: 0.1.0
+version: 0.1.1
 ---
 
 # AI SEO Optimization Skill
@@ -65,6 +65,25 @@ Content structure for AI platforms to cite:
 3. **Internal Linking** — Build semantic relationships between related content
 4. **Format Variety** — Use tables, numbered lists, Q&As, and comparison charts (all AI-parseable formats)
 5. **Human Voice** — Add first-person experience, original data, and brand-specific perspective
+
+## Striking-Distance Optimization (Google Search Console)
+
+Striking distance is the band of queries where a page already ranks in position 4-20 in Google — the bottom of page 1 through the top of page 2. Google already treats these pages as relevant enough to rank, and the click-through-rate curve is steep near the top: clicks run roughly 25-30% at position 1 and drop to low single digits by position 10, so a small move up captures most of the traffic still on the table. A query moving from position 8 to position 3 can multiply its clicks several times over, often from a title tag rewrite or a handful of added internal links. Because the ranking signal already exists, these queries are usually the cheapest wins available on a site that already gets some traffic.
+
+**Workflow:**
+
+1. **Pull GSC performance data** for the property, at the query + page level, over a recent window (28-90 days is typical). Whether exporting from the Search Console UI's Performance report or calling the Search Console API's `searchanalytics.query` method, the required fields are the same: `query`, `page`, `clicks`, `impressions`, `ctr`, `position`.
+2. **Filter to the striking-distance band** — average position between 4 and 20 — and drop rows with negligible impressions. The exact impression floor depends on the property's traffic volume: a low-traffic site may need a floor as low as 10, a high-traffic one several hundred.
+3. **Score each query by Impact × Confidence:**
+   - *Impact* — impressions, or an estimate of clicks recoverable if the query moved into position 1-3, using the CTR curve above
+   - *Confidence* — a proximity-to-top multiplier: a query at position 5 sits closer to the CTR cliff than one at position 18, so it scores higher
+
+   Multiply the two and rank descending. The result surfaces queries with meaningful search volume and only a short climb left to the top three positions.
+4. **Output a ranked action list** of page/query pairs, each with its current position, impressions, click estimate, and priority score, ready to hand to a content or on-page optimization pass.
+
+**Data source note:** this technique depends on the property's own Google Search Console data — real rankings and click behavior pulled directly from Google for that specific site. Generic keyword-research tools estimate volume and difficulty from external indexes; only Search Console holds a site's actual position and click history for that property. Access the data via the GSC UI export or the Search Console API, and verify the current endpoint name and field set against Google's own documentation before implementing — the field list above (`query`, `page`, `clicks`, `impressions`, `ctr`, `position`) is the contract to build against.
+
+*Striking-distance methodology adapted from the MIT-licensed [ericosiu/ai-marketing-skills](https://github.com/ericosiu/ai-marketing-skills) `seo-ops` skill.*
 
 ## E-E-A-T Implementation
 

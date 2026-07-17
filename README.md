@@ -11,9 +11,14 @@ This plugin provides specialized skills and agents for taking a finished product
 ## Skills
 
 ### SEO & Discovery
-- `ai-seo-optimization` - Modern SEO for AI-powered search (2025 best practices)
+- `ai-seo-optimization` - Modern SEO for AI-powered search (2025 best practices), including Google Search Console striking-distance optimization
 - `traditional-seo` - Classic SEO optimization techniques
 - `app-store-optimization` - ASO for mobile apps
+
+### Marketing Measurement & Closed-Loop
+- `closed-loop-marketing` - Readback-metric contract that makes every marketing deliverable measurable before it ships (metric, analytics source, promote/reject rule, rollback rule)
+- `experiment-stats` - Real A/B and multivariate statistics in pure Python: bootstrap confidence intervals, Mann-Whitney U, two-proportion z-test, and a dual promote-gate (significance AND minimum lift)
+- `content-scorer` - Deterministic content scoring with a self-improving, on-disk rejection-memory that compounds across runs
 
 ### Legal & Compliance
 - `legal-compliance` - Privacy policies, terms of service, GDPR/CCPA, broader legal/compliance workflows, and US crypto-law research for startup operations including stablecoins, token classification, FinCEN/MSB issues, tokenized assets, and broker-reporting questions
