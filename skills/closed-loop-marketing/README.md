@@ -30,8 +30,8 @@ Adapted from the `closed-loop-analytics-upgrade` skill in
 ## Depends on
 
 - `experiment-stats` — judges A/B-style contracts against the dual gate
-  (statistical significance and minimum lift). Built in parallel in this
-  repo; not yet implemented at the time this skill was authored.
+  (statistical significance and minimum lift). Ships in this repo:
+  `python3 skills/experiment-stats/scripts/ab_stats.py input.json`.
 - `content-scorer` — judges single-piece content contracts, with
-  compounding rejection-memory. Built in parallel in this repo; not yet
-  implemented at the time this skill was authored.
+  compounding rejection-memory. Ships in this repo:
+  `python3 skills/content-scorer/scripts/score_content.py --file draft.md`.

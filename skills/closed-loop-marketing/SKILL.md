@@ -1,7 +1,7 @@
 ---
 name: closed-loop-marketing
 description: This skill should be used when the user asks to close the loop on a campaign, define a readback metric, set up analytics readback, decide whether a marketing change actually worked, or promote-or-reject a marketing experiment. Trigger phrases include "close the loop on this campaign," "define the readback metric," "did this marketing actually work," "measure this before shipping," "set up analytics readback," and "promote-or-reject this experiment." Enforces a mandatory discipline across all marketing-skills output: every deliverable must declare, before it ships, the metric it will be judged on, the analytics source that supplies it, the decision rule that separates promote from reject, and the rollback rule that governs when to revert — then route measurement to experiment-stats (A/B tests) or content-scorer (content quality) and record the verdict. Use this whenever a marketing skill's output would otherwise be marked "done" without evidence it moved a real number.
-version: 0.1.0
+version: 0.1.1
 ---
 
 # Closed-Loop Marketing
@@ -90,10 +90,20 @@ advice -> ship -> measure -> judge -> promote or reject -> record
      compounding rejection-memory — content that failed once for a specific
      reason gets checked against that same reason on every future pass, so
      the identical mistake cannot quietly re-ship.
-   - Verify the exact invocation and output shape of `experiment-stats` and
-     `content-scorer` once those skills exist in this repo. This skill
-     defines the contract they consume; it does not own their internals,
-     and neither exists yet at the time this skill was authored.
+   - Concrete invocations (both ship in this repo):
+     - `experiment-stats`: pipe a JSON body into its CLI —
+       `python3 skills/experiment-stats/scripts/ab_stats.py input.json`
+       where `input.json` is `{"control": [...], "variants": {"B": [...]},
+       "metric": "conversion"|"value", "alpha": 0.05, "min_lift": 0.15}`. It
+       returns JSON with the lift, bootstrap CI, p-value, and a
+       `PROMOTE`/`HOLD`/`REJECT` decision.
+     - `content-scorer`: score a file against the rubric and rejection-memory —
+       `python3 skills/content-scorer/scripts/score_content.py --file draft.md
+       --memory .content-memory.json --threshold 90`. Teach it a new rejected
+       pattern with `--reject "<pattern>" --reason "<why>"` so the store
+       compounds across runs.
+     This skill defines the contract they consume; it does not own their
+     internals.
 6. **Decide.** Promote, reject, keep testing, or mark unproven. "Probably
    fine" is not a valid decision state.
 7. **Record.** Write the verdict back into the contract's `status` and
