@@ -11,9 +11,11 @@ This plugin provides specialized skills and agents for taking a finished product
 ## Skills
 
 ### SEO & Discovery
-- `ai-seo-optimization` - Modern SEO for AI-powered search (2025 best practices), including Google Search Console striking-distance optimization
+- `ai-seo-optimization` - Traditional search ranking: on-page SEO, schema markup, entity recognition, and Google Search Console striking-distance optimization
+- `geo-optimizer` - AI-visibility auditing with a runnable auditor, hedge-density analysis, and agentfacts generation for ChatGPT, Perplexity, and AI Overviews
 - `traditional-seo` - Classic SEO optimization techniques
 - `app-store-optimization` - ASO for mobile apps
+- `saas-launch-audit` - Launch-readiness checklist with PASS/FAIL verification across pricing, payments, and AI visibility
 
 ### Marketing Measurement & Closed-Loop
 - `closed-loop-marketing` - Readback-metric contract that makes every marketing deliverable measurable before it ships (metric, analytics source, promote/reject rule, rollback rule)

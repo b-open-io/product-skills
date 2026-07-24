@@ -1,6 +1,10 @@
 ---
 name: ai-seo-optimization
-description: "This skill should be used when the user asks to audit a website for SEO, improve search rankings, optimize content for AI search (ChatGPT, Perplexity, Google AI Overviews), implement schema markup, build entity recognition, analyze keyword opportunities, improve E-E-A-T signals, create an SEO strategy, or when they mention 'SEO', 'search optimization', 'rankings', 'schema', 'structured data', 'AI search', 'featured snippets', or 'knowledge graph'. Provides modern SEO workflows for the AI-powered search era including entity-based optimization, multi-platform visibility (Google, ChatGPT, Perplexity, Gemini), and technical SEO for 2025."
+description: >-
+  Audit and improve traditional search ranking: on-page SEO, schema markup, entity recognition,
+  and content structure. Use for "audit my SEO", "improve search rankings", "implement schema
+  markup", or "fix my site structure". For AI-visibility auditing and agentfacts, use
+  geo-optimizer.
 version: 0.1.1
 ---
 
