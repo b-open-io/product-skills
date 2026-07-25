@@ -82,7 +82,7 @@ For SOC 2 work, the intended split is:
 
 - Anthony uses `soc2-gap-analysis`, `soc2-evidence-collection`, and
   `soc2-policy-drafting` for compliance framing and auditor-facing work.
-- `security-ops` in bopen-tools handles technical validation and readiness.
+- `security-ops` in core handles technical validation and readiness.
 
 ## Contributing
 

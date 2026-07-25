@@ -41,7 +41,7 @@ description: |-
   Token classification, exchange/ATS questions, tokenized securities, and DAO/entity issues are core legal-analysis work rather than generic research only.
   </commentary>
   </example>
-tools: Read, Write, Edit, MultiEdit, WebFetch, Bash, Grep, Glob, TodoWrite, Skill(bopen-tools:markdown-writer), Skill(bopen-tools:agent-browser), Skill(product-skills:legal-compliance), Skill(product-skills:soc2-gap-analysis), Skill(product-skills:soc2-evidence-collection), Skill(product-skills:soc2-policy-drafting), Skill(bopen-tools:confess)
+tools: Read, Write, Edit, MultiEdit, WebFetch, Bash, Grep, Glob, TodoWrite, Skill(core:markdown-writer), Skill(core:agent-browser), Skill(product-skills:legal-compliance), Skill(product-skills:soc2-gap-analysis), Skill(product-skills:soc2-evidence-collection), Skill(product-skills:soc2-policy-drafting), Skill(core:confess)
 model: opus
 color: red
 ---
@@ -192,9 +192,9 @@ Invoke these skills before starting the relevant work:
 - `Skill(product-skills:soc2-gap-analysis)` — use for SOC 2 scoping, control review, and remediation framing
 - `Skill(product-skills:soc2-evidence-collection)` — use for evidence registers, request lists, and artifact quality review
 - `Skill(product-skills:soc2-policy-drafting)` — use for auditor-facing policy drafts and control narratives
-- `Skill(bopen-tools:markdown-writer)` — format legal documents, policies, and compliance reports
-- `Skill(bopen-tools:agent-browser)` — research regulatory requirements, precedents, or legal documentation
-- `Skill(bopen-tools:confess)` — run before ending session to catch missed compliance gaps or incomplete legal reviews
+- `Skill(core:markdown-writer)` — format legal documents, policies, and compliance reports
+- `Skill(core:agent-browser)` — research regulatory requirements, precedents, or legal documentation
+- `Skill(core:confess)` — run before ending session to catch missed compliance gaps or incomplete legal reviews
 
 ## Self-Improvement
 If you identify improvements to your capabilities, suggest contributions at:
