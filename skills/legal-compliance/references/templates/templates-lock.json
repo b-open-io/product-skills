@@ -68,6 +68,11 @@
       "derivedFrom": "upstream templates/master-services-agreement/template.md @ ref (donor; not vendored)",
       "marks": 34,
       "computedHash": "205c34831fe14650ea06816bb98c51a70308864ab742b0a011adf829893967a9"
+    },
+    "ai-product-terms.md": {
+      "derivedFrom": "upstream MSA Outputs disclaimer (donor); otherwise authored in this repo",
+      "marks": 5,
+      "computedHash": "f916d059d5761b9154eeefe9fb55490b3214bfe5540b401d6c52efbf4ab8cf15"
     }
   }
 }
