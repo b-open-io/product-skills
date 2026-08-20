@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "source": "General-Legal/legal-templates",
+  "sourceType": "github",
+  "ref": "c7c947f5d65716f1395d58ef7fda6eb2847a29b0",
+  "license": "CC0-1.0",
+  "vendored": "2026-08-20",
+  "note": "computedHash is SHA-256 of the repaired vendored file (not the upstream original); see each file's frontmatter for modifications.",
+  "templates": {
+    "advisor-agreement.md": {
+      "marks": 11,
+      "computedHash": "89ad91c26b00519dfab249273fd8172af452ae2f4234e64c750204ea37e2e5f6"
+    },
+    "cookie-notice.md": {
+      "marks": 23,
+      "computedHash": "76504066383912874474cc0038c64eb2e00ddbb43c6696a95c1ffe453fd49850"
+    },
+    "dpa-global.md": {
+      "marks": 16,
+      "computedHash": "7e03de5733d792b2edf897ce7d18667c4ee170f3a17e66e864484ecc4b7bcaad"
+    },
+    "dpa-us.md": {
+      "marks": 16,
+      "computedHash": "5ad874081ec57e7d34b28ead8a0e605fa29268952d68bff6ebd318f2fb0cfa0c"
+    },
+    "employee-offer-letter.md": {
+      "marks": 17,
+      "computedHash": "74e4e72cfa43fa91d9c6d86da6f5754b41046273be9405559bc79c499afed1eb"
+    },
+    "mutual-nda.md": {
+      "marks": 4,
+      "computedHash": "3cbf626cc93d07e741e91b5e87f67e287a2527eff0b561eb9e0106a5a25ccf28"
+    },
+    "one-way-nda.md": {
+      "marks": 3,
+      "computedHash": "a2668b73c8b0ef31e58c2d0d2a8c3f541aa9789204d7aaeab15d7f7b643b70ae"
+    },
+    "privacy-policy-gdpr.md": {
+      "marks": 91,
+      "computedHash": "9655566917687f39b5bbcde97447ddf5b515d9fa34c95f4e4e47438447e79964"
+    },
+    "privacy-policy-us.md": {
+      "marks": 78,
+      "computedHash": "fe34f9b699c858ec1d6760fd7da3fd457eee2dd51676d64d60523006a25519bc"
+    },
+    "terms-of-use.md": {
+      "marks": 30,
+      "computedHash": "bd596d24ec80b0b7a308f705769cf8cafe95b97a8023e74940220713850ec214"
+    }
+  }
+}
