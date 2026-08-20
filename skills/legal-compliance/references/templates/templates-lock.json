@@ -53,6 +53,16 @@
       "derivedFrom": "dpa-global.md",
       "marks": 15,
       "computedHash": "df6138a734dad65b0f511a6ad2f796bc9b30066947913e3b9a09b65a5cfde336"
+    },
+    "1sat-marketplace-terms-of-use.md": {
+      "derivedFrom": "terms-of-use.md",
+      "marks": 34,
+      "computedHash": "437cfffcf5527af04e4901699eb8fcdc9a5e342d5b9ed7856a3383a9e55b24ed"
+    },
+    "1sat-marketplace-privacy-policy.md": {
+      "derivedFrom": "privacy-policy-gdpr.md",
+      "marks": 91,
+      "computedHash": "aacd4811baaf5c8e246c685682416c3cc57143997c05dd42bbbb2d9d49629463"
     }
   }
 }
