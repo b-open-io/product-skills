@@ -1,6 +1,6 @@
 # Handoff: vendor General-Legal/legal-templates into legal-compliance
 
-- **Status**: OPEN — **Phase 1 complete** (templates vendored at product-skills `d2c521c`, plugin 1.0.16, skill 0.2.3); Phase 2 derivatives remain
+- **Status**: DONE — Phase 1 vendored at `d2c521c`; Phase 2 derivatives + adaptation checklist shipped at `bf52bdc` (plugin 1.0.17, skill 0.2.4). All drafts are first drafts pending licensed-counsel review.
 - **Tracker**: https://github.com/b-open-io/product-skills/issues/2 (single source of progress truth — full checklists live there)
 - **Linear**: [OPL-3728](https://linear.app/openprotocollabs/issue/OPL-3728/vendor-general-legal-legal-templates-into-product-skills-legal)
 - **Owners**: Anthony (legal content), prompt-engineer/Zack (skill wiring)
