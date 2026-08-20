@@ -63,6 +63,11 @@
       "derivedFrom": "privacy-policy-gdpr.md",
       "marks": 91,
       "computedHash": "aacd4811baaf5c8e246c685682416c3cc57143997c05dd42bbbb2d9d49629463"
+    },
+    "hosted-api-msa.md": {
+      "derivedFrom": "upstream templates/master-services-agreement/template.md @ ref (donor; not vendored)",
+      "marks": 34,
+      "computedHash": "205c34831fe14650ea06816bb98c51a70308864ab742b0a011adf829893967a9"
     }
   }
 }
