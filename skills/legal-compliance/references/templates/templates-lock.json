@@ -5,7 +5,7 @@
   "ref": "c7c947f5d65716f1395d58ef7fda6eb2847a29b0",
   "license": "CC0-1.0",
   "vendored": "2026-08-20",
-  "note": "computedHash is SHA-256 of the repaired vendored file (not the upstream original); see each file's frontmatter for modifications.",
+  "note": "computedHash is SHA-256 of the repaired vendored file (not the upstream original); see each file's frontmatter for modifications. The derivatives map covers b-open derivative templates (Phase 2 of issue #2): each is authored in this repo, derived from the base template named in derivedFrom (or from the upstream donor at ref, for hosted-api-msa.md), with the same hash-over-this-file convention.",
   "templates": {
     "advisor-agreement.md": {
       "marks": 11,
@@ -46,6 +46,13 @@
     "terms-of-use.md": {
       "marks": 30,
       "computedHash": "bd596d24ec80b0b7a308f705769cf8cafe95b97a8023e74940220713850ec214"
+    }
+  },
+  "derivatives": {
+    "sigma-identity-dpa.md": {
+      "derivedFrom": "dpa-global.md",
+      "marks": 15,
+      "computedHash": "df6138a734dad65b0f511a6ad2f796bc9b30066947913e3b9a09b65a5cfde336"
     }
   }
 }
