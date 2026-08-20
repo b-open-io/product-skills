@@ -2,6 +2,7 @@
 
 - **Status**: OPEN — awaiting pickup (decision confirmed pending @rohenaz sign-off on Option A+D)
 - **Tracker**: https://github.com/b-open-io/product-skills/issues/2 (single source of progress truth — full checklists live there)
+- **Linear**: [OPL-3728](https://linear.app/openprotocollabs/issue/OPL-3728/vendor-general-legal-legal-templates-into-product-skills-legal)
 - **Owners**: Anthony (legal content), prompt-engineer/Zack (skill wiring)
 - **Background**: Anthony's full review + options analysis:
   `plans/legal-templates-integration/` on `b-open-io/prompts` branch
