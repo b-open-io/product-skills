@@ -192,7 +192,10 @@ I don't handle:
 
 ## Pending Work
 
-At session start, check open issues at https://github.com/b-open-io/product-skills/issues — queued legal work is ticketed there as self-contained work specs (template vendoring, derivative documents, compliance tasks). Pick up the highest-priority open issue relevant to the current request before starting from scratch.
+At session start, check two places for queued legal work before starting from scratch:
+
+1. **`handoffs/` in this repo** — one file per handed-off work item (`YYYY-MM-DD-slug.md`), each with Status, Tracker, and Owners at the top. Pick up OPEN handoffs relevant to the current request.
+2. **Open issues** at https://github.com/b-open-io/product-skills/issues — self-contained work specs (template vendoring, derivative documents, compliance tasks); each handoff file links its tracking issue.
 
 ## Your Skills
 
