@@ -1,17 +1,18 @@
 ---
-source: b-open-io/product-skills
-derived_from: dpa-global.md (vendored from General-Legal/legal-templates @ c7c947f5d65716f1395d58ef7fda6eb2847a29b0)
-license: CC0-1.0
-created: 2026-08-20
-status: b-open derivative — Phase 2(1) of the legal-templates vendoring (issue #2)
-modifications: "provider-side derivative of the Global DPA for Sigma Identity (OAuth/OIDC identity provider): titled for Sigma Identity and defined the Services around identity/authentication; populated Annex 1 provider details and processing details for the IdP role (Data Subjects = end users authenticating via Sigma Identity; Categories emphasize authentication details, with public keys and signature-derived identifiers added; frequency/nature/purpose tied to authentication flows); added Section 9(e) public-ledger data clarification (Provider deletion obligations do not reach data a Data Subject elects to publish to a public, immutable blockchain — Provider does not control the ledger); added Annex 1 note that Services-scoped credentials are within processing scope per the Section 6(b) carve-out (carve-out itself kept verbatim); Global DPA body otherwise retained near-verbatim, including the Section 10 AI-training prohibition and Annex 2 Paragraph 3.4 DPF alternative mechanism"
+derived_from: references/templates/dpa-global.md (General-Legal/legal-templates@c7c947f, CC0-1.0)
+product: Sigma Identity (auth.sigmaidentity.com) — provider-side DPA
+drafted: 2026-08-20
+status: first draft for licensed counsel review — not executed, not legal advice
+adaptations: "filled service description and Annex 1 processing details for an OAuth 2.0 identity provider (account identifiers, authentication details incl. public keys/BAP references/OAuth tokens/session data, technical data; purposes: authentication, session management, fraud/abuse prevention, service operation); added new Section 9(e) On-Chain Data clause (BSV blockchain data is public and immutable, deletion obligations limited to off-chain data, Customer must not instruct writing personal data beyond pseudonymous identifiers/attestations on-chain) with a cross-referencing sentence in Annex 1; populated Annex 5 with placeholder subprocessor slots (hosting/database/email); named Provider as b-open legal entity placeholder operating Sigma Identity; preserved verbatim: processor-friendly risk allocations, credentials carve-out in Section 6(b), AI-training prohibition (Section 10), EU-US DPF recognition (Annex 2 Para 3.4), SCC Modules 2&3 / UK IDTA / Swiss FADP transfer mechanics, Irish governing law for SCCs, and the Annex 4 security measures structure; unified with the parallel PR #3 draft: Annex 1 credentials-scope clarification (Section 6(b) carve-out cross-note) grafted in"
 ---
 
-> **Not legal advice.** This template is a starting draft. Have licensed counsel in the relevant jurisdiction review any adapted document before use.
+> **Not legal advice.** First draft for licensed counsel review before any use.
 
-**SIGMA IDENTITY — DATA PROCESSING ADDENDUM**
+**DATA PROCESSING ADDENDUM**
 
-The undersigned customer ("Customer") and [<mark>b-open legal entity name</mark>], the operator of the Sigma Identity service ("Provider") (each a "Party" and collectively the "Parties") enter into this Data Processing Addendum (including the annexes attached hereto, this "DPA") as of the date signed by both Parties and forms part of that certain [<mark>CUSTOMER AGREEMENT / Sigma Identity Terms of Service</mark>] dated [<mark>Effective Date of the Agreement</mark>] (as amended, the "Agreement") between the Parties.
+**Sigma Identity Services**
+
+The undersigned customer ("Customer") and [<mark>b-open legal entity name</mark>], the operator of the Sigma Identity service available at auth.sigmaidentity.com ("Provider") (each a "Party" and collectively the "Parties") enter into this Data Processing Addendum (including the annexes attached hereto, this "DPA") as of the date signed by both Parties and forms part of that certain [<mark>CUSTOMER AGREEMENT</mark>] dated [<mark>Effective Date of the Agreement</mark>] (as amended, the "Agreement") between the Parties.
 
 **1. Definitions**
 
@@ -20,6 +21,10 @@ The following terms have the meanings set out below for purposes of this DPA. An
 Affiliate means any entity that directly or indirectly controls, is controlled by, or is under common control with the subject entity, where "control" refers to the power to direct or cause the direction of the subject entity, whether through ownership of voting securities, by contract or otherwise.
 
 Applicable Data Protection Laws means the privacy, data protection and data security laws and regulations applicable to Provider's Processing of Personal Data under the Agreement, including, as and to the extent applicable, the State Privacy Laws and GDPR.
+
+BAP means the Bitcoin Attestation Protocol, an open protocol for creating and managing identity keys and identity attestations recorded on the BSV blockchain.
+
+BSV Blockchain means the public, decentralized, append-only distributed ledger commonly known as the BSV (Bitcoin SV) blockchain, which is operated by independent third-party network participants and is not owned, operated, or controlled by Provider.
 
 Controller means the entity that, alone or jointly with others, determines the purposes and means of the Processing of Personal Data, including, as applicable, any "business" or "controller" as such term is defined by the California Consumer Privacy Act (the "CCPA") or other State Privacy Laws.
 
@@ -37,6 +42,8 @@ GDPR means, as and where applicable to Processing concerned: (i) the General Dat
 
 Information Security Incident means a breach of Provider's security resulting in the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, Personal Data in Provider's possession, custody or control. Information Security Incidents do not include unsuccessful attempts or activities that do not compromise the security of Personal Data, including unsuccessful log-in attempts, pings, port scans, denial of service attacks, or other network attacks on firewalls or networked systems.
 
+On-Chain Data means data recorded on the BSV Blockchain, including Bitcoin public keys, BAP identity keys and identity references, identity attestations, and the contents of blockchain transactions.
+
 Personal Data means Customer Data that constitutes "personal data," "personal information," or "personally identifiable information" defined in Applicable Data Protection Laws or information of a similar character regulated thereby, provided that Personal Data does not include such information pertaining to Customer's business contacts who are Customer personnel or such information that Provider receives, collects, or generates independently of the Services and not from or on behalf of Customer.
 
 Process or Processing means any operation or set of operations which is performed by Provider (or on Provider's behalf) for Customer under the Agreement on Personal Data or on sets of Personal Data, whether or not by automated means, such as collection, recording, organization, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, restriction, erasure or destruction.
@@ -49,7 +56,7 @@ SCCs means the standard contractual clauses approved by the European Commission 
 
 Security Measures has the meaning given in Section 4(a) (Provider Security Measures).
 
-Services has the meaning given in the Agreement.
+Services means the Sigma Identity authentication and identity services made available by Provider at auth.sigmaidentity.com and as further described in the Agreement, through which Customer's end users authenticate to Customer's applications using OAuth 2.0 / OpenID Connect flows and Bitcoin key-signature-based authentication with BAP identities ("Sign in with Sigma"), together with any related services described in the Agreement.
 
 State Privacy Laws means, collectively, the comprehensive state-specific data privacy laws (and any implementing regulations) currently in effect and applicable to Provider's Processing of Personal Data under the Agreement.
 
@@ -117,15 +124,15 @@ Reviews and Audits of Compliance. Customer may audit Provider's compliance with 
 
 **9. Return and Deletion**
 
-(a) Subject to Sections 9(b) and 9(c), upon the date of cessation of any Services involving the Processing of Personal Data (the "Cessation Date"), Provider will promptly cease all Processing of Personal Data for any purpose other than for storage and Processing necessary to effect the return, deletion, or anonymization of such Personal Data, or as otherwise permitted or required under this DPA or applicable law.
+(a) Subject to Sections 9(b), 9(c) and 9(e), upon the date of cessation of any Services involving the Processing of Personal Data (the "Cessation Date"), Provider will promptly cease all Processing of Personal Data for any purpose other than for storage and Processing necessary to effect the return, deletion, or anonymization of such Personal Data, or as otherwise permitted or required under this DPA or applicable law.
 
-(b) Subject to Section 9(d), to the extent technically feasible in the circumstances (as determined in Provider's sole discretion), on written request to Provider (to be made within 30 days after the Cessation Date ("Post-cessation Storage Period")), Provider will, within a commercially reasonable period following receipt of such request, as elected by Customer in such request, either (i) return a complete copy of all Personal Data within Provider's possession to Customer by secure file transfer or other commercially reasonable secure method, promptly following which Provider shall delete or anonymize all other copies of such Personal Data, or (ii) delete or anonymize all Personal Data within Provider's possession.
+(b) Subject to Sections 9(d) and 9(e), to the extent technically feasible in the circumstances (as determined in Provider's sole discretion), on written request to Provider (to be made within 30 days after the Cessation Date ("Post-cessation Storage Period")), Provider will, within a commercially reasonable period following receipt of such request, as elected by Customer in such request, either (i) return a complete copy of all Personal Data within Provider's possession to Customer by secure file transfer or other commercially reasonable secure method, promptly following which Provider shall delete or anonymize all other copies of such Personal Data, or (ii) delete or anonymize all Personal Data within Provider's possession.
 
 (c) If, during the Post-cessation Storage Period, Customer does not instruct Provider in writing to either delete or return Personal Data under Section 9(b), Provider will, within a commercially reasonable time after the expiry of the Post-cessation Storage Period, either (at its option) delete or anonymize all Personal Data then within Provider's possession, custody or control to the fullest extent technically feasible in the circumstances.
 
 (d) Provider may retain Personal Data to the extent permitted or required by applicable law, for no longer than such applicable law requires, provided that Provider will (i) maintain the confidentiality of all such Personal Data and protect it in accordance with the Security Measures, (ii) Process such Personal Data only as necessary for the purpose(s) specified in the applicable law permitting or requiring such retention, and (iii) delete or anonymize such Personal Data once it is no longer permitted or required to be retained under applicable law.
 
-(e) Public-Ledger Data. The Services permit a Data Subject to elect to associate their identity with a cryptographic public key and to publish, or direct the publication of, attestations or other records referencing that public key to a public, immutable blockchain ledger that Provider does not own, operate, or control. The Parties acknowledge that data recorded on such a public ledger (i) is published at the election or direction of the Data Subject (or of Customer), (ii) is publicly accessible and, by the design of the ledger, cannot be altered or deleted by Provider or any other party, and (iii) is therefore not within Provider's possession, custody, or control for the purposes of this Section 9. Provider's return, deletion, and anonymization obligations under this DPA apply to Personal Data held in Provider's own systems (including its record of the association between a Data Subject's account and a public key, which Provider can and will delete in accordance with this Section 9) and do not extend to data recorded on a public ledger. Customer is responsible for ensuring that Data Subjects receive appropriate notice of the public and permanent nature of any data published to a public ledger before the Data Subject elects to publish it.
+(e) On-Chain Data. Customer acknowledges and agrees that, by design of the Services, certain data — including Bitcoin public keys, BAP identity keys and identity references, identity attestations, and blockchain transactions associated with Data Subjects' identities — is recorded as On-Chain Data on the BSV Blockchain. The BSV Blockchain is a public, decentralized, append-only ledger maintained by independent third-party network participants; On-Chain Data is publicly accessible worldwide and is immutable, and Provider does not own, operate, or control the BSV Blockchain and cannot delete, modify, restrict access to, or recall On-Chain Data. Accordingly: (i) Provider's return, deletion, and anonymization obligations under this Section 9 (and any corresponding obligations elsewhere in this DPA, including under any SCCs entered into pursuant to Annex 2 (European Annex), which apply only to the extent technically feasible) apply solely to off-chain Personal Data within Provider's possession, custody, or control, and do not apply to On-Chain Data; (ii) upon deletion of the off-chain Personal Data associating a Data Subject with their On-Chain Data, the remaining On-Chain Data held outside Provider's control consists of pseudonymous keys, identifiers, and attestations; and (iii) Customer will not instruct or cause Provider to write to the BSV Blockchain any Personal Data other than pseudonymous identifiers, public keys, and identity attestations reasonably necessary for the operation of the Services, and Customer is solely responsible for any notices to and consents from Data Subjects required in respect of On-Chain Data as contemplated by Section 6.
 
 **10. Artificial Intelligence and Automated Processing**
 
@@ -169,7 +176,7 @@ By signing below, the parties' duly authorized representatives agree to be legal
 
 **Contact Details for Data Protection: **[<mark>Role</mark>] [<mark>Email</mark>]
 
-**Provider Activities: **Provider operates Sigma Identity, an identity and authentication service that enables end users to authenticate to, and share identity attributes with, Customer's applications and services using OAuth 2.0 / OpenID Connect flows and, at the Data Subject's election, cryptographic key-based identities.
+**Provider Activities: **Provider operates Sigma Identity (auth.sigmaidentity.com), an OAuth 2.0 / OpenID Connect identity provider offering Bitcoin-native authentication built on BAP (Bitcoin Attestation Protocol) identities. Customer integrates the "Sign in with Sigma" service into its applications so that Customer's end users can authenticate using Bitcoin key signatures, and Provider issues and manages the resulting OAuth tokens and sessions on Customer's behalf.
 
 **Role: **Processor (or Subprocessor, as applicable)
 
@@ -181,19 +188,21 @@ By signing below, the parties' duly authorized representatives agree to be legal
 
 **Customer's Contact Details for Data Protection: **[<mark>Role</mark>] [<mark>Email</mark>]
 
-**Customer Activities: **Customer's activities relevant to this DPA are the use and receipt of the Services under and in accordance with, and for the purposes anticipated and permitted in, the Agreement as part of its ongoing business operations.
+**Customer Activities: **Customer's activities relevant to this DPA are the integration of the Services into Customer's applications for end-user authentication, and the use and receipt of the Services under and in accordance with, and for the purposes anticipated and permitted in, the Agreement as part of its ongoing business operations.
 
 **Role: **Controller or Processor (as applicable)
 
-**Categories of Data Subjects: **Relevant Data Subjects include any Data Subjects whose Personal Data Customer causes Provider to Process in connection with the Services, including end users who authenticate to (or register for) Customer's products and services through Sigma Identity, and Customer's personnel (including employees and contractors) who administer Customer's integration with the Services or act as other business contacts or representatives of Customer.
+**Categories of Data Subjects: **Relevant Data Subjects include any Data Subjects whose Personal Data Customer causes Provider to Process in connection with the Services, including End-users and other users of Customer's products and services who authenticate through the Services, and Customer's personnel (including employees and contractors) and other business contacts or representatives of Customer.
 
 **Categories of Personal Data: **Relevant Personal Data includes any categories of Personal Data Customer causes Provider to Process as part of the provision of the Services, including:
 
-**Personal details - **for example any information that identifies the Data Subject, including name and contact information, and identity attributes (or "claims") that the Data Subject elects to share with Customer's applications through the Services.
+**Account identifiers - **for example email addresses, usernames, display names, and profile information associated with a Data Subject's account.
 
-**Authentication details - **for example usernames, passwords or PIN codes used to access the Services, security questions, authentication tokens (including OAuth access, refresh and ID tokens), session identifiers, cryptographic public keys and signature-derived identifiers associated with a Data Subject's account, multi-factor authentication data, and other access protocols. For clarity, and as contemplated by the credentials carve-out in Section 6(b) of the DPA, credentials created for and used solely to access the Services are within the scope of the Processing described in this Annex 1 — Processing such credentials is the core function of the Services.
+**Authentication details - **for example Bitcoin public keys, BAP identity keys and identity references, on-chain identity attestations, cryptographic signatures used to authenticate, OAuth access and refresh tokens, authorization codes, session identifiers and session data, and other access protocols used in connection with the Services. For clarity, and as contemplated by the credentials carve-out in Section 6(b) of the DPA, credentials created for and used solely to access the Services are within the scope of the Processing described in this Annex 1 — Processing such credentials is the core function of the Services.
 
-**Technological details - **for example internet protocol (IP) addresses, unique identifiers and numbers (including unique identifiers in tracking cookies or similar technology), pseudonymous identifiers, precise and imprecise location data, internet / application / program activity data (including sign-in event logs), and device IDs and addresses.
+**Technological details - **for example internet protocol (IP) addresses, user agent strings, device identifiers, timestamps of authentication and session events, unique identifiers and numbers (including pseudonymous identifiers), and internet / application / program activity data related to use of the Services.
+
+Certain of the foregoing identifiers — Bitcoin public keys, BAP identity keys and identity references, and on-chain identity attestations — constitute On-Chain Data recorded on the public BSV Blockchain and are publicly accessible and immutable; Provider cannot delete or modify On-Chain Data, and the return and deletion provisions of this DPA apply to such data only as set out in Section 9(e) of the DPA.
 
 **Sensitive Categories of Data, and associated additional restrictions/safeguards:**
 
@@ -201,13 +210,13 @@ By signing below, the parties' duly authorized representatives agree to be legal
 
 **Additional safeguards for sensitive data: **N/A
 
-**Frequency of transfer: **Ongoing - as initiated by Customer, and by Data Subjects authenticating to Customer's applications, in and through use of the Services.
+**Frequency of transfer: **Ongoing - as initiated by Customer and its End-users in and through use, or use on Customer's behalf, of the Services (including each authentication and session event).
 
-**Nature of the Processing: **Processing operations required in order to provide the Services and perform Provider's obligations in accordance with the Agreement and this DPA, including registering and managing Data Subject accounts and credentials; executing authentication, authorization and single-sign-on flows; issuing, validating and revoking tokens; releasing identity attributes to Customer's applications at the Data Subject's direction; and maintaining security and sign-in event logs.
+**Nature of the Processing: **Processing operations required in order to provide the Services and perform Provider's obligations in accordance with the Agreement and this DPA, including collection, recording, storage, retrieval, consultation, use, and disclosure by transmission of Personal Data in the course of authenticating End-users, issuing and validating OAuth tokens, and managing sessions.
 
-**Purpose of the Processing: **Enabling Data Subjects to authenticate to, and share identity attributes with, Customer's applications and services, as initiated by Customer in its use of the Services, and complying with Customer's documented instructions as permitted under and in accordance with the terms of this DPA and the Agreement.
+**Purpose of the Processing: **Authentication of End-users to Customer's applications; session creation, validation, and management; fraud and abuse prevention and account security; and operation, maintenance, support, and improvement of the Services — in each case as necessary to provide the Services as initiated by Customer in its use thereof, and to comply with Customer's documented instructions as permitted under and in accordance with the terms of this DPA and the Agreement.
 
-**Duration of Processing / Retention Period: **For the period determined in accordance with the Agreement and DPA, including Section 9 of the DPA.
+**Duration of Processing / Retention Period: **For the period determined in accordance with the Agreement and DPA, including Section 9 of the DPA (and, in respect of On-Chain Data, subject to Section 9(e) of the DPA).
 
 **Transfers to (sub)processors: **Transfers to Subprocessors are as, and for the purposes, described from time to time in the <mark>Subprocessor List (Annex 5) / Subprocessor Site</mark>.
 
@@ -281,7 +290,7 @@ Where Provider (or a relevant subprocessor) maintains an active certification un
 
 3.10. The audits described in Clauses 8.9(c) and 8.9(d) of the SCCs shall be subject to any relevant terms and conditions detailed in Section 8 of the DPA.
 
-3.11. Certification of deletion of Personal Data as described in Clauses 8.5 and 16(d) of the SCCs shall be provided only upon Customer's written request.
+3.11. Certification of deletion of Personal Data as described in Clauses 8.5 and 16(d) of the SCCs shall be provided only upon Customer's written request, and any deletion (and certification of deletion) under the SCCs is subject to the technical-feasibility limitations for On-Chain Data described in Section 9(e) of the DPA.
 
 **Attachment 1**
 
@@ -455,4 +464,6 @@ Business resiliency/continuity and disaster recovery procedures designed to main
 
 Customer approves Provider's engagement of the following Subprocessors to provide services pursuant to the Agreement:
 
-[<mark>Name of Subprocessor | Location(s) | Description of Processing / Services Performed</mark>]
+- [<mark>hosting provider</mark>] | [<mark>Location(s)</mark>] | Cloud infrastructure hosting for the Services
+- [<mark>database provider</mark>] | [<mark>Location(s)</mark>] | Managed database services storing off-chain account, authentication, and session data
+- [<mark>email provider</mark>] | [<mark>Location(s)</mark>] | Transactional email delivery (e.g., verification and account notification emails)

@@ -1,6 +1,6 @@
 # Handoff: vendor General-Legal/legal-templates into legal-compliance
 
-- **Status**: DONE — **Phase 1 complete** (templates vendored at product-skills `d2c521c`, plugin 1.0.16, skill 0.2.3); **Phase 2 complete** (all four derivatives shipped on `claude/handoff-docs-search-gzuzs4`: `sigma-identity-dpa.md`, `1sat-marketplace-terms-of-use.md` + `1sat-marketplace-privacy-policy.md`, `hosted-api-msa.md`, `ai-product-terms.md`; plugin 1.0.17, skill 0.2.4 — the merging PR closes issue #2)
+- **Status**: DONE — Phase 1 vendored at `d2c521c`; Phase 2 derivatives + adaptation checklist shipped at `bf52bdc` and unified with the parallel PR #3 drafts (best-of-both grafts, lock-file provenance extended to derivatives; plugin 1.0.18, skill 0.2.5). All drafts are first drafts pending licensed-counsel review.
 - **Tracker**: https://github.com/b-open-io/product-skills/issues/2 (single source of progress truth — full checklists live there)
 - **Linear**: [OPL-3728](https://linear.app/openprotocollabs/issue/OPL-3728/vendor-general-legal-legal-templates-into-product-skills-legal)
 - **Owners**: Anthony (legal content), prompt-engineer/Zack (skill wiring)
