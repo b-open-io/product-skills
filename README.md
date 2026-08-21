@@ -24,6 +24,7 @@ This plugin provides specialized skills and agents for taking a finished product
 
 ### Legal & Compliance
 - `legal-compliance` - Privacy policies, terms of service, GDPR/CCPA, broader legal/compliance workflows, and US crypto-law research for startup operations including stablecoins, token classification, FinCEN/MSB issues, tokenized assets, and broker-reporting questions
+- `legal-agentic-build` - Agentic legal workflow design and architecture (Vercel AI SDK / CrewAI). Not for privacy policy, ToS, DPA, or regulatory analysis
 - `soc2-gap-analysis` - SOC 2 scope definition, control gap analysis, and remediation framing
 - `soc2-evidence-collection` - Evidence registers, artifact quality review, and auditor request preparation
 - `soc2-policy-drafting` - SOC 2 policy drafts and auditor-facing control narratives
