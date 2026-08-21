@@ -5,7 +5,7 @@
   "ref": "c7c947f5d65716f1395d58ef7fda6eb2847a29b0",
   "license": "CC0-1.0",
   "vendored": "2026-08-20",
-  "note": "computedHash is SHA-256 of the repaired vendored file (not the upstream original); see each file's frontmatter for modifications.",
+  "note": "computedHash is SHA-256 of the repaired vendored file (not the upstream original); see each file's frontmatter for modifications. The derivatives map covers the b-open derivative drafts in ../derivatives/ (Phase 2 of issue #2): each is authored in this repo, derived from the base template named in derivedFrom (or from the upstream donor at ref, for hosted-api-msa.md and the ai-product-terms.md Outputs clause), with the same hash-over-this-file convention.",
   "templates": {
     "advisor-agreement.md": {
       "marks": 11,
@@ -46,6 +46,33 @@
     "terms-of-use.md": {
       "marks": 30,
       "computedHash": "bd596d24ec80b0b7a308f705769cf8cafe95b97a8023e74940220713850ec214"
+    }
+  },
+  "derivatives": {
+    "../derivatives/sigma-identity-dpa.md": {
+      "derivedFrom": "dpa-global.md",
+      "marks": 20,
+      "computedHash": "7573d77d6fbb1e824e51ea088e1882262bec0e2f1baf4132139f4bc5a9b7654d"
+    },
+    "../derivatives/1sat-marketplace-terms.md": {
+      "derivedFrom": "terms-of-use.md",
+      "marks": 40,
+      "computedHash": "743058465860dea8a71335fc7885ad5b1de9950c37f955f435f71ee6dbc61101"
+    },
+    "../derivatives/1sat-privacy-policy.md": {
+      "derivedFrom": "privacy-policy-gdpr.md",
+      "marks": 51,
+      "computedHash": "ce338c0e40f822f349ac7c66109db48fec252a5165de76b8cf9135c5e1062985"
+    },
+    "../derivatives/hosted-api-msa.md": {
+      "derivedFrom": "upstream templates/master-services-agreement/template.md @ ref (donor; not vendored)",
+      "marks": 50,
+      "computedHash": "6fedcd3b459aa880a5db66677fdd3279782c0757aa1e07f1ee08cfc6daef32fc"
+    },
+    "../derivatives/ai-product-terms.md": {
+      "derivedFrom": "upstream MSA Outputs disclaimer (donor); otherwise authored in this repo",
+      "marks": 4,
+      "computedHash": "cadd2416339f0b8fe07eb52a713a641775b3eada17068cbf0625c15113a73088"
     }
   }
 }

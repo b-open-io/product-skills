@@ -1,7 +1,7 @@
 ---
 name: legal-compliance
 description: "This skill should be used when the user asks to draft a privacy policy, terms of service, cookie policy, or data processing agreement; when they ask about GDPR, CCPA, HIPAA, or other privacy regulations; when they need a compliance audit, legal gap analysis, or regulatory guidance; when they ask about employment law, IP rights, open source licensing, or contract review; when they mention 'legal', 'compliance', 'regulation', 'liability', 'terms', 'privacy', or 'lawsuit'. This skill also applies to crypto and digital asset questions: token classification (Howey test), security token offerings, stablecoins, GENIUS Act, DeFi compliance, CFTC jurisdiction, DAO liability, IRS crypto tax, AML/FinCEN MSB registration, tokenization of real-world assets, UCC Article 8, and smart contract legal review. Also use for designing or building agentic legal workflows, multi-agent compliance pipelines, and legal AI system architecture using Vercel AI SDK or CrewAI."
-version: 0.2.4
+version: 0.2.5
 disable-model-invocation: false
 ---
 
@@ -175,13 +175,16 @@ frontmatter for provenance and modifications; integrity hashes in
    use — say so in the deliverable.
 
 Not vendored (deliberate): the upstream MSA (a repurposed on-prem AI-eval deal document —
-donor material only) and the HIPAA BAA (no PHI exposure). Re-review cadence: every 6 months or
-on major privacy-law change; diff against upstream at the same time.
+its good bones were instead rebuilt as the `hosted-api-msa.md` derivative below) and the
+HIPAA BAA (no PHI exposure). Re-review cadence: every 6 months or on major privacy-law
+change; diff against upstream at the same time.
 
 ### b-open Derivatives (worked examples)
 
 `references/derivatives/` holds b-open-specific adapted drafts — each a first draft for
-licensed counsel, showing the adaptation checklist applied end-to-end:
+licensed counsel, showing the adaptation checklist applied end-to-end (integrity hashes and
+`derivedFrom` provenance live in the lock file's `derivatives` map alongside the vendored
+templates):
 
 | Derivative | File | Base |
 |---|---|---|
@@ -192,7 +195,8 @@ licensed counsel, showing the adaptation checklist applied end-to-end:
 | AI Products Addendum | `ai-product-terms.md` | MSA Outputs disclaimer + original |
 
 When drafting for a b-open product, start from the matching derivative if one exists; fall
-back to the neutral template otherwise.
+back to the neutral template otherwise. Derivatives are re-reviewed on the same 6-month
+cadence as their bases.
 
 ## Document Drafting Standards
 

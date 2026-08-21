@@ -3,7 +3,7 @@ derived_from: MSA Outputs disclaimer donor (General-Legal/legal-templates@c7c947
 product: b-open-io AI agent and bot products
 drafted: 2026-08-20
 status: first draft for licensed counsel review — not executed, not legal advice
-adaptations: "MSA Outputs warranty disclaimer recast as a rider section; added no-professional-advice and human-review duties; ownership/license section mirrors DPA no-training clause; new acceptable-use, agent-autonomy/on-chain-transaction, and AI-disclosure sections drafted from scratch; liability tie-in left as cross-reference to governing agreement"
+adaptations: "MSA Outputs warranty disclaimer recast as a rider section; added no-professional-advice and human-review duties; ownership/license section mirrors DPA no-training clause; new acceptable-use, agent-autonomy/on-chain-transaction, and AI-disclosure sections drafted from scratch; liability tie-in left as cross-reference to governing agreement; unified with the parallel PR #3 draft: consequential-use human-review duty (1.4), models/moderation clause (1.5), acceptable-use items (g)-(j), and prompt-injection/supervision/credential clauses (4.4-4.5) grafted in"
 ---
 > **Not legal advice.** First draft for licensed counsel review before any use.
 
@@ -21,7 +21,9 @@ This addendum (the "**AI Addendum**") supplements the <mark>[GOVERNING AGREEMENT
 
 1.3 **No professional advice.** Outputs are not, and must not be relied on as, legal, financial, investment, tax, accounting, medical, or other professional advice. No professional-client relationship is created by your use of the AI Products. Consult a qualified, licensed professional before acting on any Output that touches such matters.
 
-1.4 **Duty to review.** You must review each Output with appropriate human judgment before using, publishing, or relying on it. You are responsible for verifying that Outputs are accurate, lawful, and appropriate for your intended use.
+1.4 **Duty to review.** You must review each Output with appropriate human judgment before using, publishing, or relying on it. You are responsible for verifying that Outputs are accurate, lawful, and appropriate for your intended use. For any use where an error could cause legal, financial, medical, safety, or other significant harm — including the publication of factual claims about real people — a qualified human must review and approve the relevant Output before it is relied on or acted upon.
+
+1.5 **Models and moderation.** Company may add, change, or retire the underlying models, and Outputs for the same Input may differ over time; unless expressly stated in the Agreement or an Order Form, no specific model, behavior, or quality level is promised. Company may apply safety filters, moderation, and usage policies to the AI Products, but does not guarantee that Outputs will be free of content that is offensive, unsafe, or otherwise objectionable, or that safety measures cannot be circumvented. If you receive an Output that violates this AI Addendum or applicable law, please report it to <mark>[EMAIL]</mark>.
 
 ## 2. Ownership & License
 
@@ -47,7 +49,15 @@ You must not, and must not permit any user, agent configuration, or automated pr
 
 (e) represent any Output as human-authored where applicable law requires disclosure that content was AI-generated, or otherwise use Outputs to deceive any person about their origin;
 
-(f) violate the applicable terms, usage policies, or acceptable-use policies of the third-party model providers whose models power the AI Products (including, as applicable, Anthropic and other providers identified in the Documentation), which are incorporated by reference to the extent they apply to your use.
+(f) violate the applicable terms, usage policies, or acceptable-use policies of the third-party model providers whose models power the AI Products (including, as applicable, Anthropic and other providers identified in the Documentation), which are incorporated by reference to the extent they apply to your use;
+
+(g) generate or distribute spam, deceptive content, or coordinated inauthentic behavior, impersonate a real person or organization, or manipulate or attempt to manipulate any market, election, or public process;
+
+(h) develop, distribute, or deploy malware, discover or exploit vulnerabilities in any system without authorization, harvest credentials, personal information, or funds without lawful authority, or conduct security testing of the AI Products without Company's prior written consent;
+
+(i) access or use any third-party platform or service through an AI Product in violation of that platform's or service's terms, robots directives, or access controls — you are responsible for ensuring that each integration you direct an AI Product to use is authorized; or
+
+(j) operate critical infrastructure, weapons, or life-safety systems, or provide medical diagnosis or treatment or legal advice to third parties, in each case unless the Agreement expressly permits it and qualified human professionals maintain meaningful oversight with the ability to intervene.
 
 Company may suspend or terminate access to the AI Products for violations of this Section 3 in accordance with the suspension and termination provisions of the Agreement.
 
@@ -59,7 +69,9 @@ Company may suspend or terminate access to the AI Products for violations of thi
 
 4.3 **On-chain finality.** Blockchain transactions are irreversible. Once an AI Product broadcasts an on-chain transaction (including transfers of digital assets, inscriptions, and attestations), neither you nor Company can reverse, cancel, or modify it, and data written on-chain cannot be deleted. Company has no obligation to reverse or compensate for any authorized on-chain action.
 
-4.4 **Safeguards not a guarantee.** Any monitoring, limits, or safety tooling Company provides are operational safeguards, not a warranty that an AI Product will act only as you intend.
+4.4 **Safeguards not a guarantee.** Any monitoring, limits, or safety tooling Company provides are operational safeguards, not a warranty that an AI Product will act only as you intend. AI Products can misinterpret instructions, act on incorrect Outputs, be manipulated by malicious content they encounter (including prompt-injection attacks), or fail mid-task; you accept these risks for any capability you enable.
+
+4.5 **Supervision and credentials.** You will supervise AI Products proportionately to the harm they could cause, and will not leave an AI Product running unattended with authority whose misuse you are not prepared to bear. Credentials, API keys, wallets, and accounts you make available to an AI Product remain your responsibility: grant the minimum access necessary, and revoke access promptly when it is no longer needed.
 
 ## 5. Disclosure
 
