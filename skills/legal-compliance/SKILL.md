@@ -1,7 +1,7 @@
 ---
 name: legal-compliance
 description: "This skill should be used when the user asks to draft a privacy policy, terms of service, cookie policy, or data processing agreement; when they ask about GDPR, CCPA, HIPAA, or other privacy regulations; when they need a compliance audit, legal gap analysis, or regulatory guidance; when they ask about employment law, IP rights, open source licensing, or contract review; when they mention 'legal', 'compliance', 'regulation', 'liability', 'terms', 'privacy', or 'lawsuit'. This skill also applies to crypto and digital asset questions: token classification (Howey test), security token offerings, stablecoins, GENIUS Act, DeFi compliance, CFTC jurisdiction, DAO liability, IRS crypto tax, AML/FinCEN MSB registration, tokenization of real-world assets, UCC Article 8, and smart contract legal review."
-version: 0.2.2
+version: 0.2.6
 disable-model-invocation: false
 ---
 
@@ -137,6 +137,67 @@ For token issuance, stablecoins, exchange/DeFi exposure, broker reporting, or to
 6. For tokenized assets, analyze DGCL/UCC/Article 8/Article 12 mechanics and whether the token changes the underlying instrument’s legal character
 7. Use state law only as a targeted overlay; do not let state appendices displace the federal analysis
 
+## Vendored Document Templates (start here for drafting)
+
+`references/templates/` contains attorney-drafted base templates vendored from
+[General-Legal/legal-templates](https://github.com/General-Legal/legal-templates) (CC0-1.0,
+pinned to upstream commit `c7c947f`, repaired per the 2026-08-20 review — see each file's
+frontmatter for provenance and modifications; integrity hashes in
+`references/templates/templates-lock.json`):
+
+| Template | File | Notes |
+|---|---|---|
+| Mutual NDA | `mutual-nda.md` | Pro-discloser; keeps the AI-tools clause (check it against our own agent pipelines before signing symmetric paper) |
+| One-way NDA | `one-way-nda.md` | |
+| DPA (Global) | `dpa-global.md` | 2021 SCCs + UK IDTA + Swiss FADP + DPF; processor-friendly — our provider-side form |
+| DPA (US) | `dpa-us.md` | |
+| Privacy Policy (US) | `privacy-policy-us.md` | Rebuilt from .docx |
+| Privacy Policy (GDPR) | `privacy-policy-gdpr.md` | Rebuilt from .docx; DPF-aware transfers section |
+| Cookie Notice | `cookie-notice.md` | |
+| Terms of Use | `terms-of-use.md` | |
+| Advisor Agreement | `advisor-agreement.md` | Rebuilt from .docx |
+| Offer Letter (CA exempt) | `employee-offer-letter.md` | California-specific |
+
+**Drafting workflow (mandatory when a matching template exists):**
+
+1. **Start from the vendored template** — never draft one of these document types from memory.
+2. **Resolve every `<mark>` field.** Before declaring a draft done, run
+   `grep -c '<mark>' <draft>` — the count must be 0. An unresolved `<mark>` is an unfinished draft.
+3. **Apply the b-open adaptation deltas** — work through
+   `references/templates/adaptation-checklist.md` (per-template checkboxes) for crypto/AI
+   context: on-chain data (wallet addresses and transaction data are public and immutable —
+   never promise erasure of on-chain data), digital-asset risk allocation, no-custody
+   positioning, AI-product output disclaimers.
+4. **Precedence:** these vendored templates take precedence over pm-toolkit's generic drafting
+   guidance (`pm-toolkit` is third-party, from the phuryn/pm-skills marketplace) whenever both
+   are loaded.
+5. **Framing:** every generated document is a first draft for licensed counsel to review before
+   use — say so in the deliverable.
+
+Not vendored (deliberate): the upstream MSA (a repurposed on-prem AI-eval deal document —
+its good bones were instead rebuilt as the `hosted-api-msa.md` derivative below) and the
+HIPAA BAA (no PHI exposure). Re-review cadence: every 6 months or on major privacy-law
+change; diff against upstream at the same time.
+
+### b-open Derivatives (worked examples)
+
+`references/derivatives/` holds b-open-specific adapted drafts — each a first draft for
+licensed counsel, showing the adaptation checklist applied end-to-end (integrity hashes and
+`derivedFrom` provenance live in the lock file's `derivatives` map alongside the vendored
+templates):
+
+| Derivative | File | Base |
+|---|---|---|
+| Sigma Identity DPA (provider-side) | `sigma-identity-dpa.md` | dpa-global |
+| 1Sat marketplace Terms | `1sat-marketplace-terms.md` | terms-of-use |
+| 1Sat privacy policy | `1sat-privacy-policy.md` | privacy-policy-gdpr |
+| Hosted-API MSA | `hosted-api-msa.md` | upstream MSA (heavy rewrite) |
+| AI Products Addendum | `ai-product-terms.md` | MSA Outputs disclaimer + original |
+
+When drafting for a b-open product, start from the matching derivative if one exists; fall
+back to the neutral template otherwise. Derivatives are re-reviewed on the same 6-month
+cadence as their bases.
+
 ## Document Drafting Standards
 
 ### Privacy Policies
@@ -175,6 +236,7 @@ For state-specific questions:
 ## Reference Files
 
 Detailed research guides are in `references/`:
+- **`references/templates/`** — vendored attorney-drafted document templates (see "Vendored Document Templates" above); `templates-lock.json` holds source pin + SHA-256 integrity hashes
 - **`references/us-federal-statutes.md`** — Annotated guide to all USC titles with key sections, common questions, and search tips
 - **`references/legal-methodology.md`** — IRAC framework, statutory interpretation canons, Bluebook citation, e-discovery standards
 - **`references/employment-law.md`** — Deep dive: Title VII, FLSA, ADA, FMLA, OSHA, NLRA with key cases and compliance checklists

@@ -6,20 +6,20 @@
     {
       "source_name": "legal",
       "source_path": "agents/legal.md",
-      "source_version": "1.1.11",
-      "source_hash": "sha256:9020cf9b55c467596521b2d988178be631a58f736eca6cdbdb7bc4372d6268e5",
+      "source_version": "1.1.12",
+      "source_hash": "sha256:7dfb590133afcce0f95d7c7be94540c31f0ac68c16839f26963a52ff0e1d0390",
       "generated_file": "product-skills-legal.toml",
-      "generated_hash": "sha256:63d9f10587e2235963e6dad75f89c3db9d01caf10894e5017a8a37ab6660c5f4",
+      "generated_hash": "sha256:ec86edc9c4888025a456777f18ae6ede885b9505b0c296f792ed90fd38428862",
       "agent_name": "product_skills_legal",
       "default_install": true
     },
     {
       "source_name": "marketer",
       "source_path": "agents/marketer.md",
-      "source_version": "1.0.6",
-      "source_hash": "sha256:653e319bf1f02f8651b308b89a12389da7233133af3f80b10d9a95488954c58c",
+      "source_version": "1.0.7",
+      "source_hash": "sha256:fdb61ec6015f69a1447b9de6d4c614435289e502e8918e89c046a30a29d723f7",
       "generated_file": "product-skills-marketer.toml",
-      "generated_hash": "sha256:09c83cbbf28d99c021b8def3cae9837706c853fe803fd5bf1ac9055ac10ecb97",
+      "generated_hash": "sha256:f57abc63090b55f91e43ed91e979dffde25b771a2592e38dd760fdd4cc16d174",
       "agent_name": "product_skills_marketer",
       "default_install": true
     }
