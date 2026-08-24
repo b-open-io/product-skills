@@ -42,7 +42,7 @@ This plugin provides specialized skills and agents for taking a finished product
 ## Agents
 
 - `legal` - Legal compliance, privacy, terms, DPAs, SOC 2 readiness, and crypto/digital-asset law research for startup operations
-- `marketer` - Product marketing, launch strategy, copy, CRO, and SEO
+- `marketer` - Product marketing, launch strategy, copy, CRO, and SEO. Social media channel operations (content calendars, per-platform drafting, engagement triage) belong to Alex in the `brand-rep` plugin, not here
 
 ## Installation
 
