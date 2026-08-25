@@ -16,10 +16,10 @@
     {
       "source_name": "marketer",
       "source_path": "agents/marketer.md",
-      "source_version": "1.0.8",
-      "source_hash": "sha256:4aca3ad78ce629f1fe52149473fcbb426820edcc1accc9af77f99ddf22237cbc",
+      "source_version": "1.0.9",
+      "source_hash": "sha256:f596c178f7abd4fbe8f06f14cabcedfd9a91980b5817862cb97837a46cd88586",
       "generated_file": "product-skills-marketer.toml",
-      "generated_hash": "sha256:faed53ccd237ea80e75e2481408812247eb27226c28df6ca824d6e47248033ee",
+      "generated_hash": "sha256:d7e4c4f9c46e8c28cc34f6062fd7cfc95387fb9064e14c5d51d69356d78db2b8",
       "agent_name": "product_skills_marketer",
       "default_install": true
     }
