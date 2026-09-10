@@ -20,6 +20,7 @@
   "files": [
     ".claude-plugin",
     ".codex-plugin",
+    "assets",
     "agents",
     "codex",
     "scripts/codex-agents/generate.py",

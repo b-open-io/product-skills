@@ -1,6 +1,6 @@
 {
   "name": "product-skills",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "Production-ready product skills with optional Anthony and Caal custom-agent adapters for Codex",
   "author": {
     "name": "b-open-io",
@@ -29,6 +29,8 @@
     "websiteURL": "https://github.com/b-open-io/product-skills",
     "defaultPrompt": [
       "Help me prepare this product for launch and production."
-    ]
+    ],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
   }
 }
